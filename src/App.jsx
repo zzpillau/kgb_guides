@@ -22,7 +22,7 @@ function App() {
         </button> */}
       </div>
       <p className="read-the-docs">
-        Начинаем работу над сайтом
+        Начинаем работу над сайтом КГБ
       </p>
     </>
   )
