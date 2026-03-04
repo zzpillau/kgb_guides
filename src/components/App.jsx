@@ -1,30 +1,22 @@
-import { useState } from 'react'
-import logo from '/logo.png'
-import '../styles/App.scss'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import routes from '../routes/index.js'
 
-function App() {
-  // const [date, setDate] = useState('')
+import Layout from './layout/Layout.jsx'
+import MainPage from './pages/MainPage.jsx'
+import PageNotFound from './pages/PageNotFound.jsx'
+
+
+const App = () => {
 
   return (
-    <>
-      <div>
-        {/* <a href="https://vite.dev" target="_blank" rel="noopener">
-          <img src={logo} className="logo" alt="Vite logo" />
-        </a> */}
-        <a href="https://react.dev" target="_blank" rel="noopener">
-          <img src={logo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Клуб Гидов Балтики</h1>
-      <div className="card">
-        {/* <button type="button" onClick={() => setDate(new Date().toLocaleDateString('ru'))}>
-          сегодня {date}
-        </button> */}
-      </div>
-      <p className="read-the-docs">
-        Начинаем работу над сайтом КГБ 2 марта 2026
-      </p>
-    </>
+    <BrowserRouter basename="/kgb_guides">
+      <Routes>
+        <Route path={routes.mainPage()} element={<Layout />}>
+          <Route index path={routes.mainPage()} element={<MainPage />} />
+          <Route path={routes.pageNotFound()} element={<PageNotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
