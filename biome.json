@@ -1,0 +1,18 @@
+{
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single"
+    }
+  },
+  "linter": {
+    "enabled": true
+  },
+  "files": {
+    "includes": ["src/**/*.js", "src/**/*.jsx"]
+  }
+}

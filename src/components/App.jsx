@@ -1,13 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import routes from '../routes/index.js'
 
 import Layout from './layout/Layout.jsx'
 import MainPage from './pages/MainPage.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
 
-
 const App = () => {
-
   return (
     <BrowserRouter basename="/kgb_guides">
       <Routes>

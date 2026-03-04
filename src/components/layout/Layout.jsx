@@ -4,16 +4,13 @@ import Footer from './Footer.jsx'
 import Header from './Header.jsx'
 
 const Layout = () => {
-
   return (
     <>
       <Header />
-        <Outlet />
+      <Outlet />
       <Footer />
     </>
-  );
+  )
 }
-
-
 
 export default Layout

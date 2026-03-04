@@ -1,8 +1,8 @@
 import logo from '/logo.png'
 import '../../styles/MainPage.scss'
 
-
 const MainPage = () => {
+  console.log('mnmn')
 
   return (
     <>
@@ -12,8 +12,7 @@ const MainPage = () => {
         </a>
       </div>
       <h1>Клуб Гидов Балтики</h1>
-      <div className="card">
-      </div>
+      <div className="card"></div>
       <p className="read-the-docs">
         Начинаем работу над сайтом КГБ 2 марта 2026
       </p>
