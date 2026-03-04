@@ -1,0 +1,23 @@
+@use "../abstract/placeholders" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+
+h1 {
+  @extend %font-header;
+  @include font($font-size-xhuge, 132px, 300);
+}
+
+h2 {
+  @extend %font-header;
+  @include font($font-size-large, 40px);
+}
+
+h3 {
+  @extend %font-header;
+  @include font($font-size-medium, 27.7px);
+}
+
+p {
+  @extend %font-main;
+  @include font($font-size-small, 24px, 400, normal, none);
+}

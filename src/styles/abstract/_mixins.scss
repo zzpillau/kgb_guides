@@ -1,0 +1,49 @@
+@use "sass:map";
+@use "sass:meta";
+
+@mixin font($size, $height, $weight: 400, $spacing: normal, $transform: uppercase) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+}
+
+@mixin tone($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+// breakpoints
+$breakpoints: (
+  'small': 380px,
+  'medium': 768px,
+  'large': 1440px,
+) !default;
+
+// @media
+@mixin media($max-bp, $min-bp: null) {
+  $max-w: if(meta.type-of($max-bp) == number, $max-bp, map.get($breakpoints, $max-bp));
+  $min-w: if($min-bp != null and meta.type-of($min-bp) == number, $min-bp, map.get($breakpoints, $min-bp));
+
+  @if $min-w and $max-w {
+    @media all and (max-width: #{$max-w}) and (min-width: #{$min-w}) {
+      @content;
+    };
+  } @else if $min-w {
+    @media all and (min-width: #{$min-w}) {
+      @content;
+    };
+  } @else {
+    @media all and (max-width: #{$max-w}) {
+      @content;
+    }; 
+  }
+}
+
+// disable-hover-on-mobile 
+@mixin disable-on-touch {
+  @media not all and (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}

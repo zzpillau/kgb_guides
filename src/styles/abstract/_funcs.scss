@@ -1,0 +1,10 @@
+@function fluid($min, $max, $minWidth, $maxWidth) {
+  @return calc(#{$max}px - (#{$max - $min}) * ((#{$maxWidth}px - 100vw) / (#{$maxWidth - $minWidth})));
+}
+
+@function fluid-percent($min, $max, $minWidth, $maxWidth) {
+  $delta: $max - $min;
+  $range: $maxWidth - $minWidth;
+
+  @return unquote("calc(#{$max}% - #{$delta} * ((#{$maxWidth}px - 100vw) / #{$range}))");
+}

@@ -1,0 +1,36 @@
+@use "../abstract/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  all: unset;
+}
+
+body.noscroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
