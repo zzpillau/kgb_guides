@@ -1,0 +1,18 @@
+@use "../abstract/variables" as *;
+@use "../abstract/placeholders" as *;
+
+button {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  @extend %transition;
+
+  &.hero__action {
+    height: 60px;
+    width: 150px;
+    color: $white;
+    background-color: $dark;
+    border-radius: 30px;
+    padding: 0 10px;
+  }
+}

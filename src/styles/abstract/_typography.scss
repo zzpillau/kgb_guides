@@ -4,12 +4,12 @@
 
 h1 {
   @extend %font-header;
-  @include font($font-size-xhuge, 132px, 300);
+  @include font($font-size-xxlarge, 58px, 300);
 }
 
 h2 {
   @extend %font-header;
-  @include font($font-size-large, 40px);
+  @include font($font-size-large, 36px);
 }
 
 h3 {
@@ -21,3 +21,14 @@ p {
   @extend %font-main;
   @include font($font-size-small, 24px, 400, normal, none);
 }
+
+.hero__labels {
+  @extend %font-main;
+  @include font($font-size-small, 24px, 400, normal);
+}
+
+.hero__actions {
+  @extend %font-main;
+  @include font($font-size-xsmall, 16px, 300, normal);
+}
+

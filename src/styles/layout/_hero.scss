@@ -1,0 +1,37 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+
+// container
+
+
+// titles
+
+
+// actions
+
+.hero__actions {
+  gap: 16px;
+}
+
+// labels
+
+.hero__labels {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__separator {
+  width: 6px;
+  height: 6px;
+  background-color: $dark;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  @include media('medium') {
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+  }
+}

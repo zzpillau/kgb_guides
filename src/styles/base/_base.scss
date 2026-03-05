@@ -12,6 +12,11 @@ html {
   margin: 0 auto;
 }
 
+body {
+  color: $dark;
+
+}
+
 *, *::before, *::after {
   box-sizing: inherit;
 }

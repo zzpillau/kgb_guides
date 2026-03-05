@@ -28,7 +28,11 @@
   font-weight: 300;
   font-style: normal;
 }
-p {
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+p, .hero__labels, .hero__actions {
   font-family: "Mulish", Verdana, sans-serif;
 }
 
@@ -37,8 +41,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 116px;
-  line-height: 132px;
+  font-size: 56px;
+  line-height: 58px;
   font-weight: 300;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -46,7 +50,7 @@ h1 {
 
 h2 {
   font-size: 32px;
-  line-height: 40px;
+  line-height: 36px;
   font-weight: 400;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -68,6 +72,22 @@ p {
   text-transform: none;
 }
 
+.hero__labels {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.hero__actions {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -78,6 +98,10 @@ html {
   scroll-behavior: smooth;
   font-size: 10px;
   margin: 0 auto;
+}
+
+body {
+  color: rgb(34, 34, 34);
 }
 
 *, *::before, *::after {
@@ -113,6 +137,65 @@ header {
   background-color: turquoise;
 }
 
+section {
+  border: 1px rgb(34, 34, 34) dotted;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.hero__actions {
+  gap: 16px;
+}
+
+.hero__labels {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__separator {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+@media all and (max-width: 768px) {
+  .hero__separator {
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -136,6 +219,19 @@ header {
   .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+button {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+button.hero__action {
+  height: 60px;
+  width: 150px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 34, 34);
+  border-radius: 30px;
+  padding: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

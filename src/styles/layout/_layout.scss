@@ -1,3 +1,5 @@
+@use "../abstract/variables" as *;
+
 body {
   background-color: gray;
 }
@@ -6,4 +8,9 @@ footer,
 header {
   height: 100px;
   background-color: turquoise;
+}
+
+section {
+  border: 1px $dark dotted;
+
 }

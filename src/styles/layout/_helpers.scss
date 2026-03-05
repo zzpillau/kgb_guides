@@ -1,0 +1,31 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  @include flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  @include flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.ta-right {
+  text-align: right;
+};
+
+.ta-left {
+  text-align: left;
+};
+
+.ta-center {
+  text-align: center;
+};

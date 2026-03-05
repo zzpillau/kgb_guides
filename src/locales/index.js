@@ -1,7 +1,9 @@
 import ru from './ru.js'
 
 const resources = {
-  ru,
+  ru: {
+    translation: ru,
+  },
 }
 
 export default resources

@@ -1,5 +1,9 @@
 @use "../base/fonts" as *;
 
+%transition {
+  transition: all .3s ease-in-out;
+}
+
 %font-main {
   font-family: 'Mulish', Verdana, sans-serif;
 }
