@@ -1,9 +1,9 @@
-import About from './About.jsx'
-import Cards from './Cards.jsx'
+import About from './About/About.jsx'
 import Hero from './Hero.jsx'
+import Tours from './Tours/Tours.jsx'
 
 export default [
   { id: 1, section: Hero },
   { id: 2, section: About },
-  { id: 3, section: Cards },
+  { id: 3, section: Tours },
 ]

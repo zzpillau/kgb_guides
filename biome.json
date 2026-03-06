@@ -1,7 +1,8 @@
 {
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "formatWithErrors": true
   },
   "javascript": {
     "formatter": {
@@ -13,6 +14,6 @@
     "enabled": true
   },
   "files": {
-    "includes": ["src/**/*.js", "src/**/*.jsx"]
+    "includes": ["src/**/*.js", "src/**/*.jsx", "src/**/*.scss"]
   }
 }

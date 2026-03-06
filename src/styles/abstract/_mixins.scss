@@ -14,6 +14,13 @@
   color: $text-color;
 }
 
+// disable-hover-on-mobile 
+@mixin disable-on-touch {
+  @media not all and (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
 // breakpoints
 $breakpoints: (
   'small': 380px,
@@ -22,28 +29,56 @@ $breakpoints: (
 ) !default;
 
 // @media
-@mixin media($max-bp, $min-bp: null) {
-  $max-w: if(meta.type-of($max-bp) == number, $max-bp, map.get($breakpoints, $max-bp));
-  $min-w: if($min-bp != null and meta.type-of($min-bp) == number, $min-bp, map.get($breakpoints, $min-bp));
+// @mixin media($max-bp, $min-bp: null) {
+//   $max-w: if(meta.type-of($max-bp) == number, $max-bp, map.get($breakpoints, $max-bp));
+//   $min-w: if($min-bp != null and meta.type-of($min-bp) == number, $min-bp, map.get($breakpoints, $min-bp));
 
-  @if $min-w and $max-w {
+//   @if $min-w and $max-w {
+//     @media all and (max-width: #{$max-w}) and (min-width: #{$min-w}) {
+//       @content;
+//     };
+//   } @else if $min-w {
+//     @media all and (min-width: #{$min-w}) {
+//       @content;
+//     };
+//   } @else {
+//     @media all and (max-width: #{$max-w}) {
+//       @content;
+//     }; 
+//   }
+// }
+
+// new media to test
+@mixin media($max-bp, $min-bp: null) {
+  $max-w: null;
+
+  @if meta.type-of($max-bp) == number {
+    $max-w: $max-bp;
+  } @else {
+    $max-w: map.get($breakpoints, $max-bp);
+  }
+
+  $min-w: null;
+
+  @if $min-bp == null {
+    $min-w: null;
+  } @else if meta.type-of($min-bp) == number {
+    $min-w: $min-bp;
+  } @else {
+    $min-w: map.get($breakpoints, $min-bp);
+  }
+
+  @if $min-w != null and $max-w != null {
     @media all and (max-width: #{$max-w}) and (min-width: #{$min-w}) {
       @content;
-    };
-  } @else if $min-w {
+    }
+  } @else if $min-w != null {
     @media all and (min-width: #{$min-w}) {
       @content;
-    };
+    }
   } @else {
     @media all and (max-width: #{$max-w}) {
       @content;
-    }; 
-  }
-}
-
-// disable-hover-on-mobile 
-@mixin disable-on-touch {
-  @media not all and (hover: none) and (pointer: coarse) {
-    @content;
+    }
   }
 }

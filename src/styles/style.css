@@ -37,7 +37,7 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-p, .hero__labels, .hero__actions {
+p, .hero__labels, .button__text {
   font-family: "Mulish", Verdana, sans-serif;
 }
 
@@ -85,7 +85,7 @@ p {
   text-transform: uppercase;
 }
 
-.hero__actions {
+.button__text {
   font-size: 12px;
   line-height: 16px;
   font-weight: 300;
@@ -227,8 +227,6 @@ button {
   border: none;
   text-align: center;
   cursor: pointer;
-}
-button.hero__action {
   height: 60px;
   width: 150px;
   color: rgb(255, 255, 255);

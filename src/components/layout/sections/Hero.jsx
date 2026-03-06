@@ -9,7 +9,8 @@ const Hero = () => {
       <div className="wrapper">
         <div className="hero__container">
           <div className="hero__content flex-column">
-            <div className="hero__titles flex-column">
+            {/* Header */}
+            <div className="hero__header flex-column">
               <h1 className="hero__title ta-center">
                 {t('titles.hero_title')}
               </h1>
@@ -17,6 +18,8 @@ const Hero = () => {
                 {t('titles.hero_subtitle')}
               </h2>
             </div>
+
+            {/* Actions */}
             <div className="hero__actions flex-row">
               <Button
                 className="hero__action"
@@ -31,6 +34,8 @@ const Hero = () => {
                 {t('buttons.pick_guide')}
               </Button>
             </div>
+
+            {/* Labels */}
             <div className="hero__labels flex-row">
               <span className="hero__label">
                 {t('labels.hero_no_middlemen')}

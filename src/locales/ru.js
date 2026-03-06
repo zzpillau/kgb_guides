@@ -4,9 +4,13 @@ const ru = {
     hero_subtitle: 'от четырех основателей Клуба гидов Балтики',
     about_title: 'Экскурсии ведут основатели Клуба',
     about_subtitle: 'Четыре стиля - один стандарт',
+    tours__title: 'Популярные направления',
   },
   texts: {
     about_text: 'С опорой на экспертизу профессионального сообщества региона',
+  },
+  guide: {
+    specs: 'Специализация',
   },
   labels: {
     hero_no_middlemen: 'Без посредников',
@@ -16,6 +20,14 @@ const ru = {
   buttons: {
     pick_tour: 'Выбрать маршрут',
     pick_guide: 'Выбрать гида',
+    request: 'Запрос',
+  },
+  tabs: {
+    kaliningrad: 'Калининград',
+    curonianSpit: 'Куршская Коса',
+    seashore: 'Побережье',
+    north: 'Север',
+    east: 'Восток',
   },
   loading: 'Загрузка…',
 }

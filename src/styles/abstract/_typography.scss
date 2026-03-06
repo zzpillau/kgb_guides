@@ -27,7 +27,7 @@ p {
   @include font($font-size-small, 24px, 400, normal);
 }
 
-.hero__actions {
+.button__text {
   @extend %font-main;
   @include font($font-size-xsmall, 16px, 300, normal);
 }
