@@ -8,7 +8,7 @@ const Tours = () => {
   const [activeTab, setActiveTab] = useState(1)
 
   return (
-    <section>
+    <section className="section tours">
       <div className="wrapper">
         <div className="tours__container">
           <div className="tours__content flex-column">

@@ -2,8 +2,17 @@
 @use "../abstract/mixins" as *;
 
 
-// container
+.hero {
+  background-image: url("../../assets/img/hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
+// container
+.hero__container {
+  padding: 60px 0;
+}
 
 // titles
 

@@ -19,7 +19,7 @@ h3 {
 
 p {
   @extend %font-main;
-  @include font($font-size-small, 24px, 400, normal, none);
+  @include font($font-size-small, 24px, 200, normal, none);
 }
 
 .hero__labels {
@@ -28,7 +28,20 @@ p {
 }
 
 .button__text {
-  @extend %font-main;
-  @include font($font-size-xsmall, 16px, 300, normal);
+  @extend %font-header;
+  @include font($font-size-small, 16px, 400, normal);
 }
 
+.ex-card__cost {
+  @extend %font-header;
+  @include font($font-size-xsmall, 16px, 400, normal);
+
+  .cost {
+    @include font($font-size-medium, 16px, 400, normal);
+  }
+}
+
+.header__nav {
+  @extend %font-header;
+  @include font($font-size-small, 27.7px);
+}

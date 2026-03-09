@@ -15,31 +15,3 @@
 }
 
 
-// GC Sceleton
-.skeleton {
-  background: #e2e2e2;
-  border-radius: 4px;
-  animation: pulse 1.5s infinite ease-in-out;
-}
-
-.skeleton-text {
-  height: 14px;
-  width: 100%;
-  margin-bottom: 8px;
-}
-
-.skeleton-button {
-  height: 36px;
-  width: 100%;
-}
-
-.guide-card__media.skeleton {
-  height: 180px;
-  width: 100%;
-}
-
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.4; }
-  100% { opacity: 1; }
-}

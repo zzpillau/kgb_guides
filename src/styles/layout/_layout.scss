@@ -1,16 +1,22 @@
 @use "../abstract/variables" as *;
 
 body {
-  background-color: gray;
+  background-color: $white;
+  color: $dark;
 }
 
-footer,
-header {
+footer {
   height: 100px;
-  background-color: turquoise;
+  background-color: $white;
+  border: 1px $dark dotted;
 }
 
-section {
+.section {
   border: 1px $dark dotted;
+  min-height: 100vh;
+
+  &.tours {
+    min-height: 70vh;
+  }
 
 }
