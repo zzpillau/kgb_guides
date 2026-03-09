@@ -2,7 +2,11 @@ import max from '../../assets/icons/max_white.svg'
 import telegram from '../../assets/icons/telegram.svg'
 import telephone from '../../assets/icons/telephone.svg'
 
+import { useTranslation } from 'react-i18next'
+
 const Header = () => {
+  const {t} = useTranslation()
+
   return (
     <header className="header">
       <div className="header__wrapper">
@@ -20,35 +24,35 @@ const Header = () => {
             <nav className="header__nav nav">
               <ul className="nav__list flex-row">
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Маршруты
+                  <a href="#tours" className="nav__link">
+                    {t('header.tours')}
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Команда
+                  <a href="#about" className="nav__link">
+                    {t('header.team')}
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Почему мы
+                  <a href="#benefits" className="nav__link">
+                    {t('header.benefits')}
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
-                    Как заказать
+                  <a href="#benefits" className="nav__link">
+                    {t('header.process')}
                   </a>
                 </li>
               </ul>
             </nav>
             <div className="header__contacts flex-row">
-              <a href="#">
+              <a href="#hero">
                 <img className="header__contacts-icon" src={telephone} alt="" />
               </a>
-              <a href="#">
+              <a href="#hero">
                 <img className="header__contacts-icon" src={max} alt="" />
               </a>
-              <a href="#">
+              <a href="#hero">
                 <img className="header__contacts-icon" src={telegram} alt="" />
               </a>
             </div>

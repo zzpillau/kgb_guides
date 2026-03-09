@@ -5,7 +5,7 @@ const Hero = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="section hero">
+    <section className="section hero" id='hero'>
       <div className="wrapper">
         <div className="hero__container">
           <div className="hero__content flex-column">
