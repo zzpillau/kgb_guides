@@ -14,12 +14,21 @@ h2 {
 
 h3 {
   @extend %font-header;
-  @include font($font-size-medium, 27.7px);
+  @include font($font-size-medium, 27.7px, 200, normal, none);
 }
+
 
 p {
   @extend %font-main;
   @include font($font-size-small, 24px, 200, normal, none);
+
+    &.guide-card__specs-value {
+       @include font($font-size-small, 24px, 400, normal);
+    }
+
+    &.guide-card__specs-label {
+       @include font($font-size-xsmall, 24px, 400, normal);
+    }
 }
 
 .hero__labels {
@@ -45,3 +54,15 @@ p {
   @extend %font-header;
   @include font($font-size-small, 27.7px);
 }
+
+// drop cap
+
+.drop-cap-word {
+  display: inline-block;
+
+  .drop-cap {
+    @extend %accent-font;
+    @include font($font-size-large, 16px, 400, normal);
+  }
+}
+

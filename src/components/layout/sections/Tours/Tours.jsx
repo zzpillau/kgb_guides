@@ -8,9 +8,9 @@ const Tours = () => {
   const [activeTab, setActiveTab] = useState(1)
 
   return (
-    <section className="section tours"  id='tours'>
+    <section className="section tours" id="tours">
       <div className="wrapper">
-        <div className="tours__container">
+        <div className="tours__container container">
           <div className="tours__content flex-column">
             <div className="tours__header">
               <h2 className="tours__title">{t('titles.tours__title')}</h2>

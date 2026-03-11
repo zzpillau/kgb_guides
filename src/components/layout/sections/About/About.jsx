@@ -6,19 +6,19 @@ const About = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="section about"  id='about'>
+    <section className="section about" id="about">
       <div className="wrapper">
-        <div className="about__container">
+        <div className="about__container container">
           <div className="about__content flex-column">
             {/* Header */}
             <div className="about__header flex-column">
               <h3 className="about__title">{t('titles.about_title')}</h3>
               <h2 className="about__subtitle">{t('titles.about_subtitle')}</h2>
-              <p className="about__text">{t('texts.about_text')}</p>
+              
             </div>
 
             {/* Cards */}
-            <div className="about__cards flex-row">
+            <div className="about__cards grid">
               {guides.map((guide) => (
                 <GuideCard
                   key={guide.id}

@@ -11,6 +11,11 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Kudry";
+  src: url("../src/assets/fonts/kudry.otf");
+  font-display: swap;
+}
+@font-face {
   font-family: "ComfortaaVariable";
   src: url("../src/assets/fonts/ComfortaaVariable.ttf");
   font-weight: 100 1000;
@@ -69,6 +74,10 @@ h1, h2, h3, .button__text, .ex-card__cost, .header__nav {
   font-family: "Manrope", "Times New Roman", serif;
 }
 
+.drop-cap-word .drop-cap {
+  font-family: "Kudry", "Times New Roman", serif;
+}
+
 h1 {
   font-size: 56px;
   line-height: 58px;
@@ -88,9 +97,9 @@ h2 {
 h3 {
   font-size: 20px;
   line-height: 27.7px;
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 p {
@@ -99,6 +108,20 @@ p {
   font-weight: 200;
   letter-spacing: normal;
   text-transform: none;
+}
+p.guide-card__specs-value {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+p.guide-card__specs-label {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: uppercase;
 }
 
 .hero__labels {
@@ -135,6 +158,17 @@ p {
 .header__nav {
   font-size: 16px;
   line-height: 27.7px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.drop-cap-word {
+  display: inline-block;
+}
+.drop-cap-word .drop-cap {
+  font-size: 32px;
+  line-height: 16px;
   font-weight: 400;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -192,7 +226,17 @@ footer {
 
 .section {
   border: 1px rgb(26, 39, 46) dotted;
-  min-height: 100vh;
+  height: 100vh;
+}
+.section .wrapper {
+  padding: 0 8px;
+  width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+}
+.section .container {
+  height: 100%;
+  padding: 60px 0;
 }
 .section.tours {
   min-height: 70vh;
@@ -323,6 +367,11 @@ footer {
   }
 }
 
+.about__content {
+  height: 100%;
+  justify-content: space-between;
+}
+
 .guide-card__image {
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -334,6 +383,90 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.about__cards {
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 45vh);
+  gap: 10px;
+  height: 100%;
+}
+.about__cards > :nth-child(even):hover {
+  box-shadow: 10px 10px 20px rgba(117, 111, 106, 0.5);
+  border: none;
+}
+.about__cards > :nth-child(odd):hover {
+  box-shadow: -10px 10px 20px rgba(117, 111, 106, 0.5);
+  border: none;
+}
+.about__cards .guide-card {
+  gap: 30px;
+  border: 1px solid rgb(117, 111, 106);
+  border-radius: 50px;
+  padding: 40px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.about__cards .card-top {
+  max-width: unset;
+  align-items: stretch;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.about__cards .card-top .guide-card__name {
+  align-items: end;
+}
+.about__cards .card-top .guide-card__specs {
+  background: rgb(240, 238, 233);
+  color: rgb(26, 39, 46);
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  position: relative;
+}
+.about__cards .card-top .guide-card__specs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20%;
+  right: -20%;
+  bottom: -20%;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, rgb(121, 182, 216), rgb(121, 182, 216) 100px, transparent 65px);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  filter: blur(20px);
+  animation: randomFloat 20s ease-in-out infinite;
+  pointer-events: none;
+}
+.about__cards .card-top .guide-card__specs > * {
+  position: relative;
+  z-index: 1;
+}
+@keyframes randomFloat {
+  0% {
+    background-position: 45% 70%;
+  }
+  25% {
+    background-position: 55% 90%;
+  }
+  50% {
+    background-position: 50% 95%;
+  }
+  75% {
+    background-position: 40% 92%;
+  }
+  100% {
+    background-position: 45% 70%;
+  }
+}
+.about__cards .card-bottom {
+  width: 100%;
+  max-width: unset;
+  align-content: stretch;
+  justify-content: space-around;
+  gap: 30px;
 }
 
 .tours {
@@ -354,6 +487,9 @@ footer {
 .button.hero__action {
   background-color: rgb(240, 238, 233);
   color: rgb(117, 111, 106);
+}
+.button.guide-card__action {
+  background-color: rgb(121, 182, 216);
 }
 
 /*# sourceMappingURL=style.css.map */

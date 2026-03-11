@@ -14,8 +14,16 @@
   padding: 0 10px;
   @extend %transition;
 
+  // & :hover {
+  //   font-size: 24px;
+  // }
+
   &.hero__action {
     background-color: $white;
     color: $button;
+  }
+
+  &.guide-card__action {
+    background-color: $accent;
   }
 }

@@ -13,7 +13,19 @@ footer {
 
 .section {
   border: 1px $dark dotted;
-  min-height: 100vh;
+  height: 100vh;
+
+  .wrapper {
+    padding: 0 8px;
+    width: $max-width;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .container {
+    height: 100%;
+    padding: 60px 0;
+  }
 
   &.tours {
     min-height: 70vh;

@@ -5,9 +5,9 @@ const Hero = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="section hero" id='hero'>
+    <section className="section hero" id="hero">
       <div className="wrapper">
-        <div className="hero__container">
+        <div className="hero__container container">
           <div className="hero__content flex-column">
             {/* Header */}
             <div className="hero__header flex-column">
@@ -17,6 +17,7 @@ const Hero = () => {
               <h2 className="hero__subtitle ta-center">
                 {t('titles.hero_subtitle')}
               </h2>
+              <p className="about__text">{t('texts.about_text')}</p>
             </div>
 
             {/* Actions */}

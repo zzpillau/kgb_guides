@@ -1,11 +1,10 @@
+import { useTranslation } from 'react-i18next'
 import max from '../../assets/icons/max_white.svg'
 import telegram from '../../assets/icons/telegram.svg'
 import telephone from '../../assets/icons/telephone.svg'
 
-import { useTranslation } from 'react-i18next'
-
 const Header = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <header className="header">
