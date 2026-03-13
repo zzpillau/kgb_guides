@@ -15,6 +15,10 @@ h2 {
 h3 {
   @extend %font-header;
   @include font($font-size-medium, 27.7px, 200, normal, none);
+
+  &.ex-card__title {
+    @include font($font-size-medium, 27.7px, 400, normal, none);
+  }
 }
 
 
@@ -33,26 +37,31 @@ p {
 
 .hero__labels {
   @extend %font-main;
-  @include font($font-size-small, 24px, 400, normal);
+  @include font($font-size-small, 16px, 400, normal);
 }
 
 .button__text {
-  @extend %font-header;
-  @include font($font-size-small, 16px, 400, normal);
+  @extend %font-main;
+  @include font($font-size-small, 24px, 400, normal);
+}
+
+.ex-card__details-text {
+  @extend %font-main;
+  @include font($font-size-small, 16px, 400, normal, none);
 }
 
 .ex-card__cost {
   @extend %font-header;
-  @include font($font-size-xsmall, 16px, 400, normal);
+  @include font($font-size-xsmall, 24px, 400, normal, none);
 
-  .cost {
-    @include font($font-size-medium, 16px, 400, normal);
+  .cost, .ruble{
+    @include font($font-size-medium, 24px, 400, normal);
   }
 }
 
 .header__nav {
   @extend %font-header;
-  @include font($font-size-small, 27.7px);
+  @include font($font-size-small, 16px);
 }
 
 // drop cap

@@ -36,6 +36,7 @@ const ru = {
     east: 'Восток',
   },
   loading: 'Загрузка…',
+  details: 'Детали...',
   work_section: {
     benefits_title: 'Почему с нами',
     process_title: 'Как мы работаем',

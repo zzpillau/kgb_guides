@@ -4,7 +4,12 @@
 
 .about__content {
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 15px;
+
+  .about__header {
+    gap: 10px;
+  }
 }
 
 .guide-card__image {
@@ -22,42 +27,75 @@
 
 
 .about__cards {
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(2, 45vh);
+  
+  
   gap: 10px;
   height: 100%;
 
 
   & > :nth-child(even):hover {
-    box-shadow: 10px 10px 20px rgba($button, 0.5);
+    box-shadow: 10px 10px 20px rgba($semidark, 0.5);
     border: none;
   }
 
   & > :nth-child(odd):hover {
-    box-shadow: -10px 10px 20px rgba($button, 0.5);
+    box-shadow: -10px 10px 20px rgba($semidark, 0.5);
     border: none;
   }
 
   .guide-card {
-    gap: 30px;
-    border: 1px solid $button;
-    border-radius: 50px;
-    padding: 40px;
+      justify-content: space-between;
+
+    gap: 10px;
+    padding: 30px;
+    min-width: 300px;
+    max-width: 370px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+  
+
+  &:hover {
+
+    transform: translateY(-5px);
   }
 
+ &:hover .guide-card__name > * {
 
-  .card-top {
-max-width: unset;               
-    align-items: stretch;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
+        border-bottom: 1px solid $accent;
+      }
+
+  &:hover .guide-card__specs::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background:
+      radial-gradient(circle at 50% 50%, $lightaccent, $lightaccent 90px, transparent 35px);
+
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    filter: blur(20px);
+    animation: randomFloat 5s ease-in-out infinite;
+    pointer-events: none;
+
+  }
+
+ &:hover .guide-card__specs-value {
+    transform: scale(1.1);
+  }
+
+  
+
+
 
    
     .guide-card__name {
       align-items: end;
+
+      
     }
 
 .guide-card__specs {
@@ -69,26 +107,12 @@ max-width: unset;
   // overflow: hidden;
   position: relative;
 
-
-
+  & > * {
+  transition: all 0.5s ease-in-out;
+  }
 
   &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -20%;
-    right: -20%;
-    bottom: -20%;
-    z-index: 0;
 
-    background:
-      radial-gradient(circle at 50% 50%, $accent, $accent 100px, transparent 65px);
-
-    background-size: 400% 400%;
-    background-repeat: no-repeat;
-    filter: blur(20px);
-    animation: randomFloat 20s ease-in-out infinite;
-    pointer-events: none;
   }
 
   > * {
@@ -97,25 +121,18 @@ max-width: unset;
   }
 }
 
+  }
+
+
+  }
+
+
+
+
+
 @keyframes randomFloat {
-  0%   { background-position: 45% 70%; }
-  25%  { background-position: 55% 90%; }
-  50%  { background-position: 50% 95%; }
-  75%  { background-position: 40% 92%; }
-  100% { background-position: 45% 70%; }
+  0%   { background-position: 45% 50%; }
+  33%  { background-position: 50% 60%; }
+  66%  { background-position: 48% 67%; }
+  100% { background-position: 45% 50%; }
 }
-  }
-
-  .card-bottom {
- width: 100%;                         // ✅ Убираем max-width
-    max-width: unset;                    // ✅ Сброс
-    align-content: stretch;
-    justify-content: space-around;
-    gap: 30px;
-
-
-  }
-
-}
-
-

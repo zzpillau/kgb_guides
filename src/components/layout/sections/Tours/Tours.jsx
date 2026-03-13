@@ -18,7 +18,7 @@ const Tours = () => {
 
             {/* tabs */}
 
-            <div className="tours__tabs">
+            <div className="tours__tabs-container flex-column">
               <Tabs activeTab={activeTab} onChange={setActiveTab} />
             </div>
           </div>

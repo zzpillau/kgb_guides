@@ -14,11 +14,10 @@ const About = () => {
             <div className="about__header flex-column">
               <h3 className="about__title">{t('titles.about_title')}</h3>
               <h2 className="about__subtitle">{t('titles.about_subtitle')}</h2>
-              
             </div>
 
             {/* Cards */}
-            <div className="about__cards grid">
+            <div className="about__cards flex-row">
               {guides.map((guide) => (
                 <GuideCard
                   key={guide.id}
