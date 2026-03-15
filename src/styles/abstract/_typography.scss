@@ -16,10 +16,12 @@ h3 {
   @extend %font-header;
   @include font($font-size-medium, 27.7px, 200, normal, none);
 
-  &.ex-card__title {
+
+}
+
+  .ex-card__title > h3 {
     @include font($font-size-medium, 27.7px, 400, normal, none);
   }
-}
 
 
 p {

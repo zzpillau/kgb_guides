@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto Flex";
   src: url("../src/assets/fonts/RobotoFlex.ttf");
@@ -101,7 +102,8 @@ h3 {
   letter-spacing: normal;
   text-transform: none;
 }
-h3.ex-card__title {
+
+.ex-card__title > h3 {
   font-size: 20px;
   line-height: 27.7px;
   font-weight: 400;
@@ -486,7 +488,7 @@ footer {
 }
 .tours .tours__content .tours__tabpanels {
   padding: 20px;
-  background: linear-gradient(to bottom, rgb(214, 205, 149) 0%, rgb(214, 205, 149) 3%, rgb(240, 238, 233) 5%, rgb(240, 238, 233) 100%);
+  background: linear-gradient(to bottom, rgb(214, 205, 149) 0%, rgb(214, 205, 149) 10%, rgb(240, 238, 233) 30%, rgb(240, 238, 233) 100%);
 }
 .tours .tours__content .tours__cards {
   gap: 20px;
@@ -497,8 +499,46 @@ footer {
   height: 100%;
   background-color: rgb(240, 238, 233);
 }
+.tours .tours__content .tours__cards .ex-card:hover .ex-card__title {
+  transform: translateY(-30px);
+  background: rgb(240, 238, 233);
+  border: 1px rgb(214, 205, 149) solid;
+}
+.tours .tours__content .tours__cards .ex-card:hover .ex-card__title h3 {
+  font-family: "Kudry";
+  font-size: 32px;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__title {
+  padding: 10px 20px 10px 20px;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: rgb(240, 238, 233);
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__title h3 {
+  text-align: center;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__media {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__media .ex-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__caption {
+  border: 1px rgb(214, 205, 149) solid;
+  border-top: none;
+}
 .tours .tours__content .tours__cards .ex-card .ex-card__desc {
-  max-height: 100px;
+  max-height: 150px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* количество строк */
+  -webkit-box-orient: vertical;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__details {
   display: flex;
@@ -523,10 +563,6 @@ footer {
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__footer .ex-card__cost .label {
   line-height: 1.5;
-}
-.tours .tours__content .tours__cards .ex-card__img {
-  width: 100%;
-  height: 100%;
 }
 
 .ex-card__body {

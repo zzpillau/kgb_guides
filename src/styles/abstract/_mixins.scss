@@ -82,3 +82,30 @@ $breakpoints: (
     }
   }
 }
+
+
+
+@mixin glow-hover($color) {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: radial-gradient(circle at 50% 50%, $color, transparent 70%);
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    animation: randomFloat 5s ease-in-out infinite;
+  }
+}
