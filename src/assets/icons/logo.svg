@@ -1,0 +1,59 @@
+<svg width="200" height="200" viewBox="0 0 200 200"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- фон -->
+  <rect width="200" height="200" fill="#1A1A1A"/>
+
+  <!-- лёгкое свечение -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- замок -->
+  <g fill="#FFFFFF" filter="url(#glow)">
+    <!-- центральная башня -->
+    <path d="M85 45 L100 25 L115 45 V95 H85 Z"/>
+
+    <!-- левая башня -->
+    <path d="M55 60 L70 40 L85 60 V105 H55 Z"/>
+
+    <!-- правая башня -->
+    <path d="M115 60 L130 40 L145 60 V105 H115 Z"/>
+
+    <!-- основание замка -->
+    <rect x="55" y="95" width="90" height="35"/>
+
+    <!-- арка -->
+    <path d="M95 130
+             A 10 10 0 0 1 105 130
+             V 150 H95 Z"
+          fill="#1A1A1A"/>
+  </g>
+
+  <!-- волны -->
+  <g stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M40 145
+             C55 140, 65 150, 80 145
+             S105 140,120 145
+             S135 150,160 145"/>
+    <path d="M40 155
+             C55 150, 65 160, 80 155
+             S105 150,120 155
+             S135 160,160 155"/>
+    <path d="M40 165
+             C55 160, 65 170, 80 165
+             S105 160,120 165
+             S135 170,160 165"/>
+    <path d="M40 175
+             C55 170, 65 180, 80 175
+             S105 170,120 175
+             S135 180,160 175"/>
+  </g>
+
+</svg>

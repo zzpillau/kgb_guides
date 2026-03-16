@@ -19,6 +19,12 @@
     background-color: $white;
     color: $semidark;
     border: 1px $white solid;
+    width: 200px;
+    border-radius: 20px;
+
+    &:hover {
+      
+    }
   }
 
   &.guide-card__action {
@@ -41,6 +47,8 @@
     background-color: $accent;
     border: 1px $accent solid;
     color: $white;
+    border-radius: 20px;
+
 
 
     &:hover {

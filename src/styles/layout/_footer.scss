@@ -13,6 +13,7 @@
 
    .footer__contacts {
     gap: 10px;
+    width: 30%;
    }
 
    .footer__socials {
@@ -20,10 +21,11 @@
    }
 
    .footer__contacts,
-   .footer__policy,
+   
    .footer__socials {
       align-items: flex-start;
    }
+
 
 
    .social-items,
@@ -56,3 +58,10 @@
     }
   }
 }
+
+
+ .footer__policy {
+  width: 30%;
+  align-items: flex-end;
+
+ }

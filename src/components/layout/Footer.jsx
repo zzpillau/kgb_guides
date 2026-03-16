@@ -4,7 +4,7 @@ import vk from '../../assets/icons/vk.svg'
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="wrapper">
         <div className="footer__container flex-row">
           <div className="footer__contacts flex-column">
@@ -51,9 +51,6 @@ const Footer = () => {
           <div className="footer__policy flex-column">
             <div className="privacy">
               <a href="#footer">Политика конфиденциальности</a>
-            </div>
-            <div className="privacy">
-              <a href="#footer">Клиентское соглашение</a>
             </div>
           </div>
         </div>

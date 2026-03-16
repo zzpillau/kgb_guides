@@ -11,10 +11,53 @@
 
 // container
 .hero__container {
-  padding: 60px 0;
+   height: 100%;
+    min-height: 100%;
+    padding: 80px 0 40px;
+    margin: 0 auto;
+    width: 100%;
 }
 
+.hero__header {
+  gap: 270px;
+}
+
+.hero__footer {
+  gap: 35px;
+}
+
+.hero__content {
+  height: 100%;
+justify-content: space-between;
+}
 // titles
+
+.hero__title {
+  gap: 30px;
+}
+
+.accented {
+  font-family: "Kudry";
+  font-size: $font-size-huge;
+  height: 100%;
+  
+}
+
+.lower {
+  line-height: 2.7;
+}
+
+.thirdString {
+  height: 100%;
+    line-height: 1.4;
+}
+
+.accented-str  {
+  height: 70px;
+  gap: 10px;
+  align-items: flex-end;
+
+}
 
 
 // actions
@@ -42,3 +85,4 @@
     border-radius: 1px;
   }
 }
+
