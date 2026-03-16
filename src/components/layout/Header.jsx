@@ -33,12 +33,12 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#benefits" className="nav__link">
+                  <a href="#work" className="nav__link">
                     {t('header.benefits')}
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#benefits" className="nav__link">
+                  <a href="#work" className="nav__link">
                     {t('header.process')}
                   </a>
                 </li>

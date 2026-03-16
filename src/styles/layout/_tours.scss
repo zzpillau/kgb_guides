@@ -8,31 +8,37 @@
     justify-content: space-between;
 
     .tours__tabs-container {
-      // gap: 20px;
-      // padding: 0 20px;
       width: 100%;
+      height: 100%;
     }
+
+    .tours__tablist {
+    width: 100%;
+    gap: 5px;
+    height: 50px;
+    background-color: $white;
+    align-items: flex-end;
+  }
 
     .tours__tabpanels {
       padding: 20px;
-      width: 100%;
-
+      width: auto;
+background: linear-gradient(
+  to bottom,
+  $goldenmist 10%,
+  $white 15%
+);
 
       // background-color: $goldenmist;
-      
-      background: linear-gradient(
-        to bottom,
-        $goldenmist 0%,
-        $goldenmist 10%,
-        $white 30%,
-        $white 100%
-      );
+    }
 
+    .tours__tabpanel {
+      height: 100%;
+      // background-color: $goldenmist;
     }
 
     .tours__cards {
-      // gap: 20px;
-      align-items: stretch;
+      // align-items: stretch;
       justify-content: center;
       gap: 20px;
       
@@ -41,44 +47,14 @@
         justify-content: space-between;
         height: 100%;
         background-color: $white;
-        width: auto;
-
-
+        width: 400px;
+               
         
-          &:hover .ex-card__title{
-            transform: translateY(-30px);
-            background: $white;
-            border: 1px $goldenmist solid;
-
-            h3 {
-              font-family: "Kudry";
-              font-size: $font-size-xmedium;
-            }
- 
-          }
-
-        .ex-card__title {
-          position: absolute;
-          top: 0;
-          
-          padding: 10px 20px 10px 20px;
-          transition: all 0.5s ease-in-out;
-          border: 1px solid transparent;
-          border-radius: 20px;
-          background-color: $white;
-
-          h3 {
-            text-align: center;
-            display: inline-block;
-          }
-        }
-
         .ex-card__media {
-
           overflow: hidden;
-          width: 100%;
+          // width: 100%;
           aspect-ratio:  4 / 3;
-          // height: 300px;
+          height: 300px;
                 
           .ex-card__img {
           width: 100%;
@@ -87,112 +63,121 @@
           display: block;
           }
         }
-
+        
         .ex-card__caption {
           border: 1px $goldenmist solid;
           border-top: none;
           position: relative;
 
-        }
+          .ex-card__body {
+            padding: 50px 15px 15px;
+            gap: 10px;
+            height: 100%;
 
+            .ex-card__title {
+              position: absolute;
+              top: 0;
+              
+              padding: 10px 20px 10px 20px;
+              transition: all 0.5s ease-in-out;
+              border: 1px solid $white;
+              border-radius: 20px;
+              background-color: $white;
 
-        .ex-card__desc {
-          max-height: 150px;
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 5; /* количество строк */
-          -webkit-box-orient: vertical;          
-        }
+              h3 {
+                text-align: center;
+                display: inline-block;
+              }
+            }
 
-        .ex-card__details {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          width: 100%;
-          gap: 10px;
-          position: relative;
-          padding: 0 30px 0;
-          background-color: transparent;
-          cursor: pointer;
+            .ex-card__desc {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;          
+            }
 
-          & > * {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.8s ease-in-out;
-            z-index: 2;
+            .ex-card__details {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-self: flex-start;
+              width: auto;
+              gap: 10px;
+              position: relative;
+              padding: 0 30px 0;
+              background-color: transparent;
+              cursor: pointer;
+
+              & > * {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.8s ease-in-out;
+                z-index: 2;
+              }
+
+              &::before {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background-color: $goldenmist;
+                border-radius: 20px;
+                transition: all 0.8s ease-in-out;
+                z-index: 1;
+                top: 0;
+                left: 0;
+              }
+
+              &:hover::before{
+                transform: scale(2) translateX(60px);
+              }
+
+              &:hover .ex-card__details-arrow {
+                transform: translateX(20px);
+              }
+            }
           }
 
-          &::before {
-            position: absolute;
-            content: "";
-            width: 20px;
-            height: 20px;
-            background-color: $goldenmist;
-            border-radius: 20px;
-            transition: all 0.8s ease-in-out;
-            z-index: 1;
-            top: 0;
-            left: 0;
-          }
-
-          &:hover::before{
-            transform: scale(2) translateX(60px);
-          }
-
-          &:hover .ex-card__details-arrow {
-            transform: translateX(20px);
-          }
-
-
-          // &:hover .ex-card__details-text {
-
-          // }
-        }
-
-
-
-        .ex-card__footer {
+          .ex-card__footer {
           width: 100%;
           justify-content: space-between;
           align-items: flex-end;
           padding: 10px;
           
-          .ex-card__info {
-            gap: 5px;
-            align-items: flex-start;
-          }
-          
-          .ex-card__cost {
-            gap: 5px;
-            align-items: flex-end;              
+            .ex-card__info {
+              gap: 5px;
+              align-items: flex-start;
 
-            .label {
-             line-height: 1.5;
-            }
-          }      
+              .ex-card__cost {
+                gap: 5px;
+                align-items: flex-end;              
+
+                .label {
+                line-height: 1.5;
+                }
+              }
+                    
               .ex-card__duration {
                 border-bottom: 1px $goldenmist solid;
               }
+            }
+          }
+        }
+
+        &:hover .ex-card__title{
+          border: 1px $goldenmist solid !important;
+          transform: translateY(-30px);
+          background: $white;
+
+          h3 {
+            font-family: "Kudry";
+            font-size: $font-size-xmedium;
+          }
         }
       }
-
     }
   }
 }
-
-.ex-card__body {
-  padding:65px 15px 15px;
-  gap: 10px;
-  height: 100%;
-}
-
-  .tours__tablist {
-    width: 100%;
-    gap: 5px;
-    height: 50px;
-    background-color: $white;
-    align-items: flex-end;
-
-  }
 

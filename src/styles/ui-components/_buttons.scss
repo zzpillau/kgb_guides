@@ -29,7 +29,20 @@
     }
   }
 
+
   &.ex-card__action {
+    background-color: $semidark;
+    border: 1px $semidark solid;
+    color: $white;
+  }
+
+
+  &.comunity__action {
+    background-color: $accent;
+    border: 1px $accent solid;
+    color: $white;
+
+
     &:hover {
       background-color: $white;
       border: 1px $lightdark solid;

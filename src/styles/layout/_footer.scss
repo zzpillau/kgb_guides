@@ -1,0 +1,58 @@
+@use "../abstract/variables" as *;
+
+.footer {
+  background-color: $dark;
+  color: $white;
+
+
+
+  .footer__container {
+    padding: 20px 60px;
+   justify-content: space-between;
+   align-items: flex-start;
+
+   .footer__contacts {
+    gap: 10px;
+   }
+
+   .footer__socials {
+    width: 350px;
+   }
+
+   .footer__contacts,
+   .footer__policy,
+   .footer__socials {
+      align-items: flex-start;
+   }
+
+
+   .social-items,
+   .footer__policy {
+    gap: 5px;
+    
+   }
+
+
+   .social-item-icon {
+    height: 24px;
+    width: 24px;
+
+   }
+ 
+    .vk {
+      height: 30px;
+      width: 30px;
+    }
+
+    .privacy > a {
+        color: $white;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+
+    .contact-link {
+      color: $white;
+    }
+  }
+}

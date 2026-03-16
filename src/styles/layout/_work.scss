@@ -1,0 +1,109 @@
+@use "../abstract/variables" as *;
+
+
+
+.work {
+
+  // background-color: $dark;
+  background-color: $semidark;
+
+
+  .work__content {
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .process__wrapper,
+  .benefits__wrapper {
+    position: relative;
+    height: 100%;
+    width: 50%;
+  }
+  
+  .benefits__content {
+    color: $white;
+    width: 50%;
+    height: 300px;  
+    gap: 30px;
+    position: absolute;
+    top: 40px;
+    left: 82px;
+    justify-content: flex-start;
+    
+  }
+
+
+  .process__content {
+    position: absolute;
+    right: 82px;
+    top: 10px;
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    border-radius: 40px;
+    padding: 30px 10px;
+    gap: 30px;
+
+  //   box-shadow:
+  // 0px -30px 50px transparentize($white, 0.55);
+
+  }
+
+  .process-list, 
+  .benefits-list {
+    align-items: flex-start;
+    gap: 20px 0;
+  }
+
+
+
+  .process-list {
+    list-style: none;
+    counter-reset: my-counter;
+    padding-left: 0;
+
+
+    li {
+      counter-increment: my-counter;
+      position: relative;
+      padding-left: 2rem;
+      height: 40px;
+
+      &::before {
+        content: counter(my-counter) ".";
+        position: absolute;
+        left: -45px;
+        top: -8px;
+        font-family: "Kudry";
+        font-size: $font-size-xlarge;
+        width: 60px; 
+        text-align: right;
+        color: $goldenmist;
+      }
+    }
+
+  }
+
+
+  .benefits-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 2rem; 
+
+    &::before {
+      content: "•";  
+      position: absolute;
+      left: 0;
+      top: 0.1em; 
+      font-size: 1.5em;
+      line-height: 1;
+      color: $goldenmist;  
+    }
+  }
+}
+
+
+}

@@ -1,0 +1,26 @@
+@use "../abstract/variables" as *;
+
+.comunity {
+
+  .comunity__content {
+    gap: 30px;
+  }
+  
+  .comunity__body {
+    width: 723px;
+
+    .comunity__body-text {
+      width: 100%;
+      text-align: justify;
+    }
+  }
+
+  .comunity__actions {
+    width: 723px;
+    justify-content: space-between;
+  }
+
+  .comunity__action {
+    width: 300px;
+  }
+}

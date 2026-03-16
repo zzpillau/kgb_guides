@@ -38,7 +38,7 @@
   
   
   gap: 10px;
-height: auto;
+height: 100%;
 
   & > :nth-child(even):hover {
     box-shadow: 10px 10px 20px rgba($semidark, 0.5);
@@ -51,20 +51,17 @@ height: auto;
   }
 
   .guide-card {
-      justify-content: space-between;
-
+    justify-content: space-between;
     gap: 10px;
     padding: 20px 10px;
     width: 300px;
-height: auto;
+    height: auto;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
   
-
-  &:hover {
-
-    transform: translateY(-5px);
-  }
+    &:hover {
+      transform: translateY(-5px);
+    }
 
  &:hover .guide-card__name > * {
 

@@ -1,11 +1,5 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Roboto Flex";
-  src: url("../src/assets/fonts/RobotoFlex.ttf");
-  font-weight: 100 1000;
-  font-display: swap;
-}
-@font-face {
   font-family: "MontserratVariable";
   src: url("../src/assets/fonts/MontserratVariable.ttf");
   font-weight: 100 1000;
@@ -14,12 +8,6 @@
 @font-face {
   font-family: "Kudry";
   src: url("../src/assets/fonts/kudry.otf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "ComfortaaVariable";
-  src: url("../src/assets/fonts/ComfortaaVariable.ttf");
-  font-weight: 100 1000;
   font-display: swap;
 }
 @font-face {
@@ -67,7 +55,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-p, .hero__labels, .button__text, .ex-card__details-text {
+p, .hero__labels, .button__text, .ex-card__details-text, .work .benefits-list > *, .work .process-list, .privacy > a,
+.footer__contacts-item > a {
   font-family: "MontserratVariable", "Times New Roman", serif;
 }
 
@@ -132,6 +121,13 @@ p.guide-card__specs-label {
   letter-spacing: normal;
   text-transform: uppercase;
 }
+p.comunity__body-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
 
 .hero__labels {
   font-size: 16px;
@@ -188,7 +184,31 @@ p.guide-card__specs-label {
   line-height: 16px;
   font-weight: 400;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+.work .benefits-list > * {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 200;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.work .process-list {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 200;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.privacy > a,
+.footer__contacts-item > a {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 200;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 * {
@@ -205,6 +225,7 @@ html {
 
 body {
   color: rgb(26, 39, 46);
+  background-color: rgb(240, 238, 233);
 }
 
 *, *::before, *::after {
@@ -236,7 +257,7 @@ body {
 }
 
 footer {
-  height: 100px;
+  height: 150px;
   background-color: rgb(240, 238, 233);
   border: 1px rgb(26, 39, 46) dotted;
 }
@@ -250,11 +271,20 @@ footer {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  height: 100%;
 }
 .section .container {
-  height: auto;
+  height: 100%;
   min-height: 100%;
-  padding: 60px 0;
+  padding: 60px 0 0 8px;
+  margin: 0 auto;
+  width: 100%;
+}
+.section.work {
+  height: 60vh;
+}
+.section.comunity {
+  height: 40vh;
 }
 
 .flex-row {
@@ -349,6 +379,47 @@ footer {
   height: 24px;
 }
 
+.footer {
+  background-color: rgb(26, 39, 46);
+  color: rgb(240, 238, 233);
+}
+.footer .footer__container {
+  padding: 20px 60px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer .footer__container .footer__contacts {
+  gap: 10px;
+}
+.footer .footer__container .footer__socials {
+  width: 350px;
+}
+.footer .footer__container .footer__contacts,
+.footer .footer__container .footer__policy,
+.footer .footer__container .footer__socials {
+  align-items: flex-start;
+}
+.footer .footer__container .social-items,
+.footer .footer__container .footer__policy {
+  gap: 5px;
+}
+.footer .footer__container .social-item-icon {
+  height: 24px;
+  width: 24px;
+}
+.footer .footer__container .vk {
+  height: 30px;
+  width: 30px;
+}
+.footer .footer__container .privacy > a {
+  color: rgb(240, 238, 233);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.footer .footer__container .contact-link {
+  color: rgb(240, 238, 233);
+}
+
 .hero {
   background-image: url("../../assets/img/port-tiltshift.jpg");
   background-size: cover;
@@ -410,7 +481,7 @@ footer {
 
 .about__cards {
   gap: 10px;
-  height: auto;
+  height: 100%;
 }
 .about__cards > :nth-child(even):hover {
   box-shadow: 10px 10px 20px rgba(117, 111, 106, 0.5);
@@ -489,14 +560,24 @@ footer {
 }
 .tours .tours__content .tours__tabs-container {
   width: 100%;
+  height: 100%;
+}
+.tours .tours__content .tours__tablist {
+  width: 100%;
+  gap: 5px;
+  height: 50px;
+  background-color: rgb(240, 238, 233);
+  align-items: flex-end;
 }
 .tours .tours__content .tours__tabpanels {
   padding: 20px;
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(214, 205, 149) 0%, rgb(214, 205, 149) 10%, rgb(240, 238, 233) 30%, rgb(240, 238, 233) 100%);
+  width: auto;
+  background: linear-gradient(to bottom, rgb(214, 205, 149) 10%, rgb(240, 238, 233) 15%);
+}
+.tours .tours__content .tours__tabpanel {
+  height: 100%;
 }
 .tours .tours__content .tours__cards {
-  align-items: stretch;
   justify-content: center;
   gap: 20px;
 }
@@ -504,34 +585,12 @@ footer {
   justify-content: space-between;
   height: 100%;
   background-color: rgb(240, 238, 233);
-  width: auto;
-}
-.tours .tours__content .tours__cards .ex-card:hover .ex-card__title {
-  transform: translateY(-30px);
-  background: rgb(240, 238, 233);
-  border: 1px rgb(214, 205, 149) solid;
-}
-.tours .tours__content .tours__cards .ex-card:hover .ex-card__title h3 {
-  font-family: "Kudry";
-  font-size: 24px;
-}
-.tours .tours__content .tours__cards .ex-card .ex-card__title {
-  position: absolute;
-  top: 0;
-  padding: 10px 20px 10px 20px;
-  transition: all 0.5s ease-in-out;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  background-color: rgb(240, 238, 233);
-}
-.tours .tours__content .tours__cards .ex-card .ex-card__title h3 {
-  text-align: center;
-  display: inline-block;
+  width: 400px;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__media {
   overflow: hidden;
-  width: 100%;
   aspect-ratio: 4/3;
+  height: 300px;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__media .ex-card__img {
   width: 100%;
@@ -544,32 +603,50 @@ footer {
   border-top: none;
   position: relative;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__desc {
-  max-height: 150px;
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body {
+  padding: 50px 15px 15px;
+  gap: 10px;
+  height: 100%;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__title {
+  position: absolute;
+  top: 0;
+  padding: 10px 20px 10px 20px;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid rgb(240, 238, 233);
+  border-radius: 20px;
+  background-color: rgb(240, 238, 233);
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__title h3 {
+  text-align: center;
+  display: inline-block;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__desc {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* количество строк */
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__details {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__details {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 100%;
+  align-self: flex-start;
+  width: auto;
   gap: 10px;
   position: relative;
   padding: 0 30px 0;
   background-color: transparent;
   cursor: pointer;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__details > * {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__details > * {
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.8s ease-in-out;
   z-index: 2;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__details::before {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__details::before {
   position: absolute;
   content: "";
   width: 20px;
@@ -581,45 +658,137 @@ footer {
   top: 0;
   left: 0;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__details:hover::before {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__details:hover::before {
   transform: scale(2) translateX(60px);
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__details:hover .ex-card__details-arrow {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__details:hover .ex-card__details-arrow {
   transform: translateX(20px);
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__footer {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__footer {
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
   padding: 10px;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__footer .ex-card__info {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__footer .ex-card__info {
   gap: 5px;
   align-items: flex-start;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__footer .ex-card__cost {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__footer .ex-card__info .ex-card__cost {
   gap: 5px;
   align-items: flex-end;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__footer .ex-card__cost .label {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__footer .ex-card__info .ex-card__cost .label {
   line-height: 1.5;
 }
-.tours .tours__content .tours__cards .ex-card .ex-card__footer .ex-card__duration {
+.tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__footer .ex-card__info .ex-card__duration {
   border-bottom: 1px rgb(214, 205, 149) solid;
 }
-
-.ex-card__body {
-  padding: 65px 15px 15px;
-  gap: 10px;
-  height: 100%;
+.tours .tours__content .tours__cards .ex-card:hover .ex-card__title {
+  border: 1px rgb(214, 205, 149) solid !important;
+  transform: translateY(-30px);
+  background: rgb(240, 238, 233);
+}
+.tours .tours__content .tours__cards .ex-card:hover .ex-card__title h3 {
+  font-family: "Kudry";
+  font-size: 24px;
 }
 
-.tours__tablist {
+.work {
+  background-color: rgb(117, 111, 106);
+}
+.work .work__content {
+  margin: 0 auto;
+  height: 100%;
+}
+.work .process__wrapper,
+.work .benefits__wrapper {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+.work .benefits__content {
+  color: rgb(240, 238, 233);
+  width: 50%;
+  height: 300px;
+  gap: 30px;
+  position: absolute;
+  top: 40px;
+  left: 82px;
+  justify-content: flex-start;
+}
+.work .process__content {
+  position: absolute;
+  right: 82px;
+  top: 10px;
   width: 100%;
-  gap: 5px;
-  height: 50px;
+  height: auto;
   background-color: rgb(240, 238, 233);
-  align-items: flex-end;
+  border-radius: 40px;
+  padding: 30px 10px;
+  gap: 30px;
+}
+.work .process-list,
+.work .benefits-list {
+  align-items: flex-start;
+  gap: 20px 0;
+}
+.work .process-list {
+  list-style: none;
+  counter-reset: my-counter;
+  padding-left: 0;
+}
+.work .process-list li {
+  counter-increment: my-counter;
+  position: relative;
+  padding-left: 2rem;
+  height: 40px;
+}
+.work .process-list li::before {
+  content: counter(my-counter) ".";
+  position: absolute;
+  left: -45px;
+  top: -8px;
+  font-family: "Kudry";
+  font-size: 48px;
+  width: 60px;
+  text-align: right;
+  color: rgb(214, 205, 149);
+}
+.work .benefits-list {
+  list-style: none;
+  padding-left: 0;
+}
+.work .benefits-list li {
+  position: relative;
+  padding-left: 2rem;
+}
+.work .benefits-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 1.5em;
+  line-height: 1;
+  color: rgb(214, 205, 149);
+}
+
+.comunity .comunity__content {
+  gap: 30px;
+}
+.comunity .comunity__body {
+  width: 723px;
+}
+.comunity .comunity__body .comunity__body-text {
+  width: 100%;
+  text-align: justify;
+}
+.comunity .comunity__actions {
+  width: 723px;
+  justify-content: space-between;
+}
+.comunity .comunity__action {
+  width: 300px;
 }
 
 .button {
@@ -642,7 +811,17 @@ footer {
   border: 1px rgb(121, 182, 216) solid;
   color: rgb(121, 182, 216);
 }
-.button.ex-card__action:hover {
+.button.ex-card__action {
+  background-color: rgb(117, 111, 106);
+  border: 1px rgb(117, 111, 106) solid;
+  color: rgb(240, 238, 233);
+}
+.button.comunity__action {
+  background-color: rgb(121, 182, 216);
+  border: 1px rgb(121, 182, 216) solid;
+  color: rgb(240, 238, 233);
+}
+.button.comunity__action:hover {
   background-color: rgb(240, 238, 233);
   border: 1px rgb(176, 168, 161) solid;
   color: rgb(117, 111, 106);

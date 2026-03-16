@@ -35,7 +35,13 @@ p {
     &.guide-card__specs-label {
        @include font($font-size-xsmall, 24px, 400, normal);
     }
+
+    &.comunity__body-text {
+      @include font($font-size-small, 24px, 400, normal, none);
+    }
 }
+
+
 
 .hero__labels {
   @extend %font-main;
@@ -73,7 +79,27 @@ p {
 
   .drop-cap {
     @extend %accent-font;
-    @include font($font-size-large, 16px, 400, normal);
+    @include font($font-size-large, 16px, 400, normal, none);
   }
 }
 
+
+.work {
+
+
+  .benefits-list > * {
+    @extend %font-main;
+    @include font($font-size-medium, 36px, 200, normal, none);
+  }
+
+  .process-list {
+    @extend %font-main;
+    @include font($font-size-medium, 36px, 200, normal, none);
+  }
+}
+
+.privacy > a,
+.footer__contacts-item > a {
+  @extend %font-main;
+  @include font($font-size-small, 24px, 200, normal, none);
+}
