@@ -63,7 +63,7 @@
   font-style: normal;
   font-display: swap;
 }
-.button, .button.guide-card__action:hover .button__text, .button.ex-card__action:hover .button__text, .button.tours__tab--active .button__text {
+.button, .button .button__text, .button.tours__tab--active .button__text {
   transition: all 0.3s ease-in-out;
 }
 
@@ -250,10 +250,10 @@ footer {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  height: 100%;
 }
 .section .container {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   padding: 60px 0;
 }
 
@@ -386,7 +386,7 @@ footer {
 .about__content {
   height: 100%;
   justify-content: space-around;
-  gap: 15px;
+  gap: 25px;
 }
 .about__content .about__header {
   gap: 10px;
@@ -394,20 +394,23 @@ footer {
 
 .guide-card__image {
   aspect-ratio: 1/1;
+  flex: 0 0 auto;
   overflow: hidden;
   border-radius: 50%;
 }
 
 .guide-card__image img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
 
+.guide-card__desc {
+  padding: 10px;
+}
+
 .about__cards {
   gap: 10px;
-  height: 100%;
+  height: auto;
 }
 .about__cards > :nth-child(even):hover {
   box-shadow: 10px 10px 20px rgba(117, 111, 106, 0.5);
@@ -420,11 +423,9 @@ footer {
 .about__cards .guide-card {
   justify-content: space-between;
   gap: 10px;
-  padding: 30px;
-  min-width: 300px;
-  max-width: 370px;
-  width: 100%;
-  height: 100%;
+  padding: 20px 10px;
+  width: 300px;
+  height: auto;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
@@ -486,18 +487,24 @@ footer {
   gap: 15px;
   justify-content: space-between;
 }
+.tours .tours__content .tours__tabs-container {
+  width: 100%;
+}
 .tours .tours__content .tours__tabpanels {
   padding: 20px;
+  width: 100%;
   background: linear-gradient(to bottom, rgb(214, 205, 149) 0%, rgb(214, 205, 149) 10%, rgb(240, 238, 233) 30%, rgb(240, 238, 233) 100%);
 }
 .tours .tours__content .tours__cards {
-  gap: 20px;
   align-items: stretch;
+  justify-content: center;
+  gap: 20px;
 }
 .tours .tours__content .tours__cards .ex-card {
   justify-content: space-between;
   height: 100%;
   background-color: rgb(240, 238, 233);
+  width: auto;
 }
 .tours .tours__content .tours__cards .ex-card:hover .ex-card__title {
   transform: translateY(-30px);
@@ -506,9 +513,11 @@ footer {
 }
 .tours .tours__content .tours__cards .ex-card:hover .ex-card__title h3 {
   font-family: "Kudry";
-  font-size: 32px;
+  font-size: 24px;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__title {
+  position: absolute;
+  top: 0;
   padding: 10px 20px 10px 20px;
   transition: all 0.5s ease-in-out;
   border: 1px solid transparent;
@@ -517,6 +526,7 @@ footer {
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__title h3 {
   text-align: center;
+  display: inline-block;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__media {
   overflow: hidden;
@@ -532,6 +542,7 @@ footer {
 .tours .tours__content .tours__cards .ex-card .ex-card__caption {
   border: 1px rgb(214, 205, 149) solid;
   border-top: none;
+  position: relative;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__desc {
   max-height: 150px;
@@ -546,6 +557,35 @@ footer {
   justify-content: flex-start;
   width: 100%;
   gap: 10px;
+  position: relative;
+  padding: 0 30px 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__details > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease-in-out;
+  z-index: 2;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__details::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: rgb(214, 205, 149);
+  border-radius: 20px;
+  transition: all 0.8s ease-in-out;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__details:hover::before {
+  transform: scale(2) translateX(60px);
+}
+.tours .tours__content .tours__cards .ex-card .ex-card__details:hover .ex-card__details-arrow {
+  transform: translateX(20px);
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__footer {
   width: 100%;
@@ -564,9 +604,12 @@ footer {
 .tours .tours__content .tours__cards .ex-card .ex-card__footer .ex-card__cost .label {
   line-height: 1.5;
 }
+.tours .tours__content .tours__cards .ex-card .ex-card__footer .ex-card__duration {
+  border-bottom: 1px rgb(214, 205, 149) solid;
+}
 
 .ex-card__body {
-  padding: 15px;
+  padding: 65px 15px 15px;
   gap: 10px;
   height: 100%;
 }
@@ -594,10 +637,15 @@ footer {
   color: rgb(117, 111, 106);
   border: 1px rgb(240, 238, 233) solid;
 }
-.button.guide-card__action:hover, .button.ex-card__action:hover {
+.button.guide-card__action:hover {
   background-color: rgb(240, 238, 233);
   border: 1px rgb(121, 182, 216) solid;
   color: rgb(121, 182, 216);
+}
+.button.ex-card__action:hover {
+  background-color: rgb(240, 238, 233);
+  border: 1px rgb(176, 168, 161) solid;
+  color: rgb(117, 111, 106);
 }
 .button.tours__tab {
   border: 1px rgb(176, 168, 161) solid;

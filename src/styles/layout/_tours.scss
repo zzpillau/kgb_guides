@@ -10,10 +10,13 @@
     .tours__tabs-container {
       // gap: 20px;
       // padding: 0 20px;
+      width: 100%;
     }
 
     .tours__tabpanels {
       padding: 20px;
+      width: 100%;
+
 
       // background-color: $goldenmist;
       
@@ -28,15 +31,18 @@
     }
 
     .tours__cards {
-      gap: 20px;
+      // gap: 20px;
       align-items: stretch;
+      justify-content: center;
+      gap: 20px;
       
 
       .ex-card {
         justify-content: space-between;
-        // gap: 15px;
         height: 100%;
         background-color: $white;
+        width: auto;
+
 
         
           &:hover .ex-card__title{
@@ -46,12 +52,15 @@
 
             h3 {
               font-family: "Kudry";
-              font-size: $font-size-large;
+              font-size: $font-size-xmedium;
             }
  
           }
 
         .ex-card__title {
+          position: absolute;
+          top: 0;
+          
           padding: 10px 20px 10px 20px;
           transition: all 0.5s ease-in-out;
           border: 1px solid transparent;
@@ -60,6 +69,7 @@
 
           h3 {
             text-align: center;
+            display: inline-block;
           }
         }
 
@@ -68,6 +78,7 @@
           overflow: hidden;
           width: 100%;
           aspect-ratio:  4 / 3;
+          // height: 300px;
                 
           .ex-card__img {
           width: 100%;
@@ -80,6 +91,8 @@
         .ex-card__caption {
           border: 1px $goldenmist solid;
           border-top: none;
+          position: relative;
+
         }
 
 
@@ -97,7 +110,47 @@
           justify-content: flex-start;
           width: 100%;
           gap: 10px;
+          position: relative;
+          padding: 0 30px 0;
+          background-color: transparent;
+          cursor: pointer;
+
+          & > * {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.8s ease-in-out;
+            z-index: 2;
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: $goldenmist;
+            border-radius: 20px;
+            transition: all 0.8s ease-in-out;
+            z-index: 1;
+            top: 0;
+            left: 0;
+          }
+
+          &:hover::before{
+            transform: scale(2) translateX(60px);
+          }
+
+          &:hover .ex-card__details-arrow {
+            transform: translateX(20px);
+          }
+
+
+          // &:hover .ex-card__details-text {
+
+          // }
         }
+
+
 
         .ex-card__footer {
           width: 100%;
@@ -117,7 +170,10 @@
             .label {
              line-height: 1.5;
             }
-          }          
+          }      
+              .ex-card__duration {
+                border-bottom: 1px $goldenmist solid;
+              }
         }
       }
 
@@ -126,7 +182,7 @@
 }
 
 .ex-card__body {
-  padding: 15px;
+  padding:65px 15px 15px;
   gap: 10px;
   height: 100%;
 }

@@ -5,7 +5,7 @@
 .about__content {
   height: 100%;
   justify-content: space-around;
-  gap: 15px;
+  gap: 25px;
 
   .about__header {
     gap: 10px;
@@ -14,15 +14,23 @@
 
 .guide-card__image {
   aspect-ratio: 1 / 1;
+ flex: 0 0 auto;
   overflow: hidden;
   border-radius: 50%;
+  
+ 
 }
 
 .guide-card__image img {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  
   object-fit: cover;
   display: block;
+}
+
+.guide-card__desc {
+  padding: 10px;
 }
 
 
@@ -30,8 +38,7 @@
   
   
   gap: 10px;
-  height: 100%;
-
+height: auto;
 
   & > :nth-child(even):hover {
     box-shadow: 10px 10px 20px rgba($semidark, 0.5);
@@ -47,11 +54,9 @@
       justify-content: space-between;
 
     gap: 10px;
-    padding: 30px;
-    min-width: 300px;
-    max-width: 370px;
-    width: 100%;
-    height: 100%;
+    padding: 20px 10px;
+    width: 300px;
+height: auto;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
   
@@ -87,7 +92,7 @@
     transform: scale(1.1);
   }
 
-  
+
 
 
 

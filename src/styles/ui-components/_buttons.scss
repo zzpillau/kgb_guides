@@ -21,20 +21,31 @@
     border: 1px $white solid;
   }
 
-  &.guide-card__action,
-  &.ex-card__action {
+  &.guide-card__action {
     &:hover {
       background-color: $white;
       border: 1px $accent solid;
       color: $accent;
+    }
+  }
+
+  &.ex-card__action {
+    &:hover {
+      background-color: $white;
+      border: 1px $lightdark solid;
+      color: $semidark;
+    }
+  }
+    
+
       
       .button__text {
         @extend %transition;
         // font-size: 18px;
         // font-weight: 600;
       }
-    }
-  }
+    
+  
 
   &.tours__tab {
     border: 1px $lightdark solid;
@@ -58,6 +69,7 @@
         font-weight: 600;
       }
   }
-
 }
+
+
 
