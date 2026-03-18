@@ -332,8 +332,11 @@ footer {
   position: fixed;
   height: 60px;
   width: 100%;
-  background-color: rgb(240, 238, 233);
+  background-color: rgba(240, 238, 233, 0);
   z-index: 1000;
+}
+.header.scrolled {
+  background: rgb(240, 238, 233);
   box-shadow: 0 3px 5px rgba(117, 111, 106, 0.5);
 }
 
