@@ -12,18 +12,15 @@
   }
 }
 
-.guide-card__image {
-  aspect-ratio: 1 / 1;
- flex: 0 0 auto;
-  overflow: hidden;
-  border-radius: 50%;
-  
- 
+.guide-card__media {
+  width: 150px;
+  height: 150px;
 }
 
-.guide-card__image img {
-  // width: 100%;
-  // height: 100%;
+
+.guide-card__media img {
+  width: 150px;
+  height: 150px;
   
   object-fit: cover;
   display: block;
@@ -52,7 +49,7 @@ height: 100%;
 
   .guide-card {
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
     padding: 20px 10px;
     width: 300px;
     height: auto;
@@ -63,10 +60,14 @@ height: 100%;
       transform: translateY(-5px);
     }
 
- &:hover .guide-card__name > * {
+ &:hover .guide-card__name {
 
-        border-bottom: 1px solid $accent;
+      // border-bottom: 1px solid $accent;
       }
+
+
+
+
 
   &:hover .guide-card__specs::before {
     content: '';
@@ -80,8 +81,17 @@ height: 100%;
     background-size: 400% 400%;
     background-repeat: no-repeat;
     filter: blur(20px);
-    animation: randomFloat 5s ease-in-out infinite;
+    animation: randomFloat 7s ease-in-out infinite;
     pointer-events: none;
+
+  }
+
+  .guide-card__specs p {
+    // transition: all 0.3s ease-in-out;
+
+    border-bottom: 1px solid $accent;
+
+
 
   }
 
@@ -89,13 +99,20 @@ height: 100%;
     transform: scale(1.1);
   }
 
+  &:hover .guide-card__specs p {
+    border-bottom: 1px solid transparent;
+
+
+
+  }
 
 
 
 
    
     .guide-card__name {
-      align-items: end;
+      // align-self: end;
+      gap: 15px;
 
       
     }
@@ -110,7 +127,7 @@ height: 100%;
   position: relative;
 
   & > * {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
   }
 
 
@@ -131,8 +148,9 @@ height: 100%;
 
 
 @keyframes randomFloat {
-  0%   { background-position: 45% 50%; }
+  0%   { background-position: 50% 150%; }
+  10% { background-position: 45% 120%; }
   33%  { background-position: 50% 60%; }
   66%  { background-position: 48% 67%; }
-  100% { background-position: 45% 50%; }
+  100% { background-position: 50% 150%; }
 }

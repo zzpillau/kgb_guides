@@ -27,6 +27,7 @@ const ru = {
     pick_tour: 'Выбрать маршрут',
     pick_guide: 'Выбрать гида',
     request: 'Запрос',
+    add_to_list: 'В список',
   },
   tabs: {
     kaliningrad: 'Калининград',

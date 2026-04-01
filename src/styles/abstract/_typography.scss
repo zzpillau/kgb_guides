@@ -29,7 +29,7 @@ p {
   @include font($font-size-small, 24px, 200, normal, none);
 
     &.guide-card__specs-value {
-       @include font($font-size-small, 24px, 400, normal);
+       @include font($font-size-xsmall, 24px, 400, normal);
     }
 
     &.guide-card__specs-label {

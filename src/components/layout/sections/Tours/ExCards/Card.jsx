@@ -1,9 +1,21 @@
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import detailsImg from '../../../../../assets/icons/details.svg'
 import Button from '../../../../ui/Button.jsx'
 
 const Card = ({ id, src, title, desc, time, cost }) => {
   const { t } = useTranslation()
+
+  const renderWithBreaks = (text) => {
+    const parts = text.split('↵')
+    return parts.map((part, i) => (
+      // biome-ignore lint: index key is safe because parts order is static
+      <React.Fragment key={i}>
+        {part}
+        {i < parts.length - 1 && <br />}
+      </React.Fragment>
+    ))
+  }
 
   return (
     <div className="ex-card flex-column" id={id}>
@@ -20,7 +32,7 @@ const Card = ({ id, src, title, desc, time, cost }) => {
       <div className="ex-card__caption flex-column">
         <div className="ex-card__body flex-column">
           <div className="ex-card__title">
-            <h3>{title}</h3>
+            <h3>{renderWithBreaks(title)}</h3>
           </div>
 
           <p className="ex-card__desc">{desc}</p>
@@ -47,7 +59,7 @@ const Card = ({ id, src, title, desc, time, cost }) => {
               className="ex-card__action"
               onClick={() => console.log(title, '-', id)}
             >
-              {t('buttons.request')}
+              {t('buttons.add_to_list')}
             </Button>
           </div>
         </div>

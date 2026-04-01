@@ -1,54 +1,19 @@
 @charset "UTF-8";
 @font-face {
   font-family: "MontserratVariable";
-  src: url("../src/assets/fonts/MontserratVariable.ttf");
+  src: url("/kgb_guides/fonts/MontserratVariable.ttf");
   font-weight: 100 1000;
   font-display: swap;
 }
 @font-face {
   font-family: "Kudry";
-  src: url("../src/assets/fonts/kudry.otf");
+  src: url("/kgb_guides/fonts/kudry.otf");
   font-display: swap;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("../src/assets/fonts/Manrope.ttf");
+  src: url("/kgb_guides/fonts/Manrope.ttf");
   font-weight: 100 1000;
-  font-display: swap;
-}
-@font-face {
-  font-family: Mulish;
-  src: url("../src/assets/fonts/Mulish-Medium.ttf");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Mulish;
-  src: url("../src/assets/fonts/Mulish-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Mulish;
-  src: url("../src/assets/fonts/Mulish-Italic.ttf");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Oswald;
-  src: url("../src/assets/fonts/Oswald-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Oswald;
-  src: url("../src/assets/fonts/Oswald-Light.ttf");
-  font-weight: 300;
-  font-style: normal;
   font-display: swap;
 }
 .button, .button .button__text, .button.tours__tab--active .button__text {
@@ -108,7 +73,7 @@ p {
   text-transform: none;
 }
 p.guide-card__specs-value {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: normal;
@@ -536,14 +501,14 @@ footer {
   gap: 10px;
 }
 
-.guide-card__image {
-  aspect-ratio: 1/1;
-  flex: 0 0 auto;
-  overflow: hidden;
-  border-radius: 50%;
+.guide-card__media {
+  width: 150px;
+  height: 150px;
 }
 
-.guide-card__image img {
+.guide-card__media img {
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   display: block;
 }
@@ -566,7 +531,7 @@ footer {
 }
 .about__cards .guide-card {
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   padding: 20px 10px;
   width: 300px;
   height: auto;
@@ -575,9 +540,6 @@ footer {
 }
 .about__cards .guide-card:hover {
   transform: translateY(-5px);
-}
-.about__cards .guide-card:hover .guide-card__name > * {
-  border-bottom: 1px solid rgb(121, 182, 216);
 }
 .about__cards .guide-card:hover .guide-card__specs::before {
   content: "";
@@ -588,14 +550,20 @@ footer {
   background-size: 400% 400%;
   background-repeat: no-repeat;
   filter: blur(20px);
-  animation: randomFloat 5s ease-in-out infinite;
+  animation: randomFloat 7s ease-in-out infinite;
   pointer-events: none;
+}
+.about__cards .guide-card .guide-card__specs p {
+  border-bottom: 1px solid rgb(121, 182, 216);
 }
 .about__cards .guide-card:hover .guide-card__specs-value {
   transform: scale(1.1);
 }
+.about__cards .guide-card:hover .guide-card__specs p {
+  border-bottom: 1px solid transparent;
+}
 .about__cards .guide-card .guide-card__name {
-  align-items: end;
+  gap: 15px;
 }
 .about__cards .guide-card .guide-card__specs {
   background: rgb(240, 238, 233);
@@ -606,7 +574,7 @@ footer {
   position: relative;
 }
 .about__cards .guide-card .guide-card__specs > * {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .about__cards .guide-card .guide-card__specs > * {
   position: relative;
@@ -615,7 +583,10 @@ footer {
 
 @keyframes randomFloat {
   0% {
-    background-position: 45% 50%;
+    background-position: 50% 150%;
+  }
+  10% {
+    background-position: 45% 120%;
   }
   33% {
     background-position: 50% 60%;
@@ -624,7 +595,7 @@ footer {
     background-position: 48% 67%;
   }
   100% {
-    background-position: 45% 50%;
+    background-position: 50% 150%;
   }
 }
 .tours .tours__content {
@@ -645,20 +616,21 @@ footer {
 .tours .tours__content .tours__tabpanels {
   padding: 20px;
   width: auto;
-  background: linear-gradient(to bottom, rgb(214, 205, 149) 10%, rgb(240, 238, 233) 15%);
+  border-top: 1px solid rgb(214, 205, 149);
 }
 .tours .tours__content .tours__tabpanel {
-  height: 100%;
+  height: auto;
   justify-content: space-around;
 }
 .tours .tours__content .tours__cards {
   align-items: stretch;
   justify-content: center;
   gap: 20px;
+  flex-shrink: 1;
 }
 .tours .tours__content .tours__cards .ex-card {
   justify-content: space-between;
-  height: 100%;
+  height: 540px;
   background-color: rgb(240, 238, 233);
   width: 400px;
 }
@@ -666,31 +638,30 @@ footer {
   overflow: hidden;
   aspect-ratio: 4/3;
   height: 300px;
+  flex-shrink: 0;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__media .ex-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: all 2s ease-in-out;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__caption {
   border: 1px rgb(214, 205, 149) solid;
   border-top: none;
-  position: relative;
+  width: 100%;
+  flex: 1;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body {
-  padding: 50px 15px 15px;
+  padding: 10px;
   gap: 10px;
-  height: 100%;
+  flex: none;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__title {
-  position: absolute;
-  top: 0;
-  padding: 10px 20px 10px 20px;
-  transition: all 0.5s ease-in-out;
-  border: 1px solid rgb(240, 238, 233);
-  border-radius: 20px;
-  background-color: rgb(240, 238, 233);
+  height: 5.5rem;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__title h3 {
   text-align: center;
@@ -701,6 +672,7 @@ footer {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  margin-bottom: auto;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__body .ex-card__details {
   display: flex;
@@ -743,7 +715,8 @@ footer {
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 10px;
+  padding: 0 15px 15px;
+  margin-top: auto;
 }
 .tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__footer .ex-card__info {
   gap: 5px;
@@ -759,14 +732,8 @@ footer {
 .tours .tours__content .tours__cards .ex-card .ex-card__caption .ex-card__footer .ex-card__info .ex-card__duration {
   border-bottom: 1px rgb(214, 205, 149) solid;
 }
-.tours .tours__content .tours__cards .ex-card:hover .ex-card__title {
-  border: 1px rgb(214, 205, 149) solid !important;
-  transform: translateY(-30px);
-  background: rgb(240, 238, 233);
-}
-.tours .tours__content .tours__cards .ex-card:hover .ex-card__title h3 {
-  font-family: "Kudry";
-  font-size: 24px;
+.tours .tours__content .tours__cards .ex-card:hover .ex-card__img {
+  transform: scale(1.2);
 }
 
 .work {
@@ -908,8 +875,8 @@ footer {
   border: 1px rgb(176, 168, 161) solid;
   border-bottom: none;
   background-color: rgb(240, 238, 233);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   color: rgb(117, 111, 106);
 }
 .button.tours__tab--active {
