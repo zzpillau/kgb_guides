@@ -22,12 +22,21 @@ body {
   top: 50%;
   left: 50%;
   min-width: 364px;
+  max-width: 700px;
+  width: 90%;
   transform: translate(-50%, -50%);
   z-index: 1001;
-  overflow-y: auto;
   align-self: center;
 }
 
+
+
 .close-btn {
+
   align-self: end;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  
 }

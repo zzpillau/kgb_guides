@@ -97,8 +97,11 @@
     &.close-btn {
     background-color: $white;
     border: none;
-    width: 24px;
-    height: 24px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 30px;
+    
     
   }
 }

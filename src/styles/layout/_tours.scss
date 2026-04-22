@@ -2,6 +2,8 @@
 @use "../abstract/mixins" as *;
 
 .tours {
+  height: fit-content;
+  min-height: 100vh;
 
   .tours__content {
     height: 100%;
@@ -22,12 +24,10 @@
 
     .tours__tabpanels {
       padding: 20px;
-      width: auto;
-      // background: linear-gradient(
-      //   to bottom,
-      //   $goldenmist 10%,
-      //   $white 15%
-      // );
+      // width: auto;
+        width: 100%;
+
+
       border-top: 1px solid $goldenmist;
 
     }
@@ -43,6 +43,7 @@
       justify-content: center;
       gap: 20px;
       flex-shrink: 1;
+      flex-wrap: wrap;
       
 
       .ex-card {
@@ -71,9 +72,9 @@
         .ex-card__caption {
           border: 1px $goldenmist solid;
           border-top: none;
-          // position: relative;
           width: 100%;
           flex: 1;
+
 
           .ex-card__body {
             padding: 10px;
@@ -173,16 +174,7 @@
           }
         }
 
-        // &:hover .ex-card__title{
-        //   border: 1px $goldenmist solid !important;
-        //   transform: translateY(-30px);
-        //   background: $white;
 
-        //   h3 {
-        //     font-family: "Kudry";
-        //     font-size: $font-size-xmedium;
-        //   }
-        // }
 
         &:hover .ex-card__img {
           transform: scale(1.2);
@@ -191,3 +183,123 @@
     }
   }
 }
+
+.extended__container {
+  width: 100%;
+  margin: 0 auto;
+  max-height: 90vh;
+  gap: 15px;
+  padding: 0 0 15px;
+  overflow: visible;
+
+  .extended__header {
+    position: relative;
+    width: 100%;
+
+    .extended__header-text {
+      gap: 20px;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+
+      & > * {
+        background-color: $white;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding: 5px 10px 5px 45px;
+      }
+    }
+  }
+
+  .extended__caption {
+    overflow-y: auto;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+flex-grow: 1;
+    padding: 10px 30px;
+    gap: 10px;
+
+  }
+
+
+  .extended__actions {
+    width: fit-content;
+  }
+
+  .extended__subtitle {
+    width: 100%;
+    text-align: center;
+  }
+ 
+  .extended__profit,
+  .extended__text {
+    align-items: flex-start;
+
+  }
+}
+
+
+.carousel {
+  width: 100%;
+  height: 350px; /* можешь поставить 400–450px */
+  overflow: hidden;
+  position: relative;
+}
+
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* заполняет блок полностью */
+  display: block;
+}
+
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-item.active ~ .carousel-item {
+  transform: translateX(100%);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.carousel-btn:first-of-type {
+  left: 5px;
+}
+
+.carousel-btn:last-of-type {
+  right: 5px;
+}
+
+

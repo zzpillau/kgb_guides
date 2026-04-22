@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import detailsImg from '../../../../../assets/icons/details.svg'
 import Button from '../../../../ui/Button.jsx'
-
 import Modal from '../../../../ui/Modal.jsx'
+import ExtendedCard from './ExtendedCard.jsx'
 
 const Card = ({ id, src, title, desc, time, cost }) => {
   const { t } = useTranslation()
@@ -41,7 +41,12 @@ const Card = ({ id, src, title, desc, time, cost }) => {
 
             <p className="ex-card__desc">{desc}</p>
 
-            <div className="ex-card__details">
+            <div
+              className="ex-card__details"
+              onClick={() => {
+                setIsOpen(true)
+              }}
+            >
               <p className="ex-card__details-text">{t('details')}</p>
               <div className="ex-card__details-arrow">
                 <img src={detailsImg} alt="arrow" />
@@ -63,7 +68,6 @@ const Card = ({ id, src, title, desc, time, cost }) => {
                 className="ex-card__action"
                 onClick={() => {
                   console.log(title, '-', id)
-                  setIsOpen(true)
                 }}
               >
                 {t('buttons.add_to_list')}
@@ -74,7 +78,7 @@ const Card = ({ id, src, title, desc, time, cost }) => {
       </div>
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <div>Это содержимое модального окна</div>
+        <ExtendedCard id={id} />
       </Modal>
     </>
   )
