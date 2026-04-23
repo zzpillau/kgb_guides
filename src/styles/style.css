@@ -292,8 +292,8 @@ footer {
     padding: 20px 0 8px;
   }
 }
-.section .container.hero-container {
-  padding: 60px 0 0 60px;
+.section .container.work__container {
+  padding: 80px 0 0 60px;
 }
 .flex-row {
   display: flex;
@@ -344,6 +344,11 @@ footer {
 @media all and (max-width: 768px) and (min-width: 350px) {
   .header .nav__list {
     display: none;
+  }
+}
+@media all and (max-width: 840px) and (min-width: 769px) {
+  .header .nav__list .nav__link {
+    font-size: calc(14px - (-2) * (769px - 100vw) / (-71));
   }
 }
 
@@ -420,18 +425,22 @@ footer {
 .footer {
   background-color: rgb(26, 39, 46);
   color: rgb(240, 238, 233);
+  height: fit-content;
 }
 .footer .footer__container {
   padding: 20px 60px;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 35px;
+  flex-wrap: wrap;
 }
 .footer .footer__container .footer__contacts {
   gap: 10px;
-  width: 30%;
 }
 .footer .footer__container .footer__socials {
-  width: 350px;
+  min-width: 300px;
+  max-width: 350px;
+  width: 100%;
 }
 .footer .footer__container .footer__contacts,
 .footer .footer__container .footer__socials {
@@ -459,7 +468,6 @@ footer {
 }
 
 .footer__policy {
-  width: 30%;
   align-items: flex-end;
 }
 
@@ -598,6 +606,8 @@ footer {
 
 .guide-card__desc {
   padding: 10px;
+  text-wrap: wrap;
+  width: 100%;
 }
 
 .about__cards {
@@ -606,22 +616,17 @@ footer {
   gap: 10px;
   height: 100%;
 }
-.about__cards > :nth-child(even):hover {
-  box-shadow: 10px 10px 20px rgba(117, 111, 106, 0.5);
-  border: none;
-}
-.about__cards > :nth-child(odd):hover {
-  box-shadow: -10px 10px 20px rgba(117, 111, 106, 0.5);
-  border: none;
-}
 .about__cards .guide-card {
   justify-content: space-between;
   gap: 20px;
   padding: 20px 10px;
-  width: 300px;
-  height: auto;
+  max-width: 300px;
+  flex-shrink: 1;
+  height: 100%;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  box-shadow: 10px 10px 20px rgba(117, 111, 106, 0.5);
+  border: none;
 }
 .about__cards .guide-card:hover {
   transform: translateY(-5px);
@@ -958,11 +963,15 @@ footer {
 }
 
 .work {
+  height: fit-content;
+  min-height: 60vh;
   background-color: rgb(117, 111, 106);
 }
 .work .work__content {
   margin: 0 auto;
   height: 100%;
+  gap: 30px;
+  justify-content: space-between;
 }
 @media all and (max-width: 768px) and (min-width: 350px) {
   .work .work__content {
@@ -971,29 +980,26 @@ footer {
 }
 .work .process__wrapper,
 .work .benefits__wrapper {
-  position: relative;
   height: 100%;
-  width: 50%;
+}
+.work .benefits__wrapper {
+  padding-left: 40px;
+}
+.work .process__wrapper {
+  padding-right: 40px;
 }
 .work .benefits__content {
   color: rgb(240, 238, 233);
-  width: 50%;
+  width: 100%;
   height: 300px;
   gap: 30px;
-  position: absolute;
-  top: 40px;
-  left: 82px;
   justify-content: flex-start;
 }
 .work .process__content {
-  position: absolute;
-  right: 82px;
-  top: 10px;
   width: 100%;
-  height: auto;
   background-color: rgb(240, 238, 233);
-  border-radius: 40px;
-  padding: 30px 10px;
+  border-radius: 20px;
+  padding: 20px 35px;
   gap: 30px;
 }
 .work .process-list,
@@ -1010,7 +1016,7 @@ footer {
   counter-increment: my-counter;
   position: relative;
   padding-left: 2rem;
-  height: 40px;
+  text-wrap: wrap;
 }
 .work .process-list li::before {
   content: counter(my-counter) ".";
@@ -1026,10 +1032,12 @@ footer {
 .work .benefits-list {
   list-style: none;
   padding-left: 0;
+  width: 100%;
 }
 .work .benefits-list li {
   position: relative;
   padding-left: 2rem;
+  font-size: 18px;
 }
 .work .benefits-list li::before {
   content: "•";
@@ -1043,6 +1051,7 @@ footer {
 
 .comunity {
   height: fit-content;
+  min-height: 40vh;
 }
 .comunity .comunity__title {
   text-wrap: wrap;
@@ -1061,13 +1070,12 @@ footer {
   height: 100%;
 }
 .comunity .comunity__actions {
-  width: 723px;
-  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
 }
 @media all and (max-width: 768px) and (min-width: 350px) {
   .comunity .comunity__actions {
     flex-direction: column;
-    gap: 15px;
   }
 }
 .comunity .comunity__action {

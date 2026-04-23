@@ -4,6 +4,7 @@
 
 .comunity {
     height: fit-content;
+    min-height: 40vh;
 
   .comunity__title {
     text-wrap: wrap;
@@ -28,12 +29,13 @@
   }
 
   .comunity__actions {
-    width: 723px;
-    justify-content: space-between;
+    width: 100%;
+    // justify-content: space-between;
+    gap: 15px;
     
     @include media('medium', 'small') {
       flex-direction: column;
-      gap: 15px;
+      
     }
 
   }

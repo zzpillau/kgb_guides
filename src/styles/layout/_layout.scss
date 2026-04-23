@@ -35,8 +35,12 @@ footer {
         padding: 20px 0 8px;
       }
 
-    &.hero-container {
-      padding: 60px 0 0 60px;
+    &.hero__container {
+      // padding: 60px 0 0 60px;
+    }
+
+    &.work__container {
+      padding: 80px 0 0 60px;
     }
 
   }

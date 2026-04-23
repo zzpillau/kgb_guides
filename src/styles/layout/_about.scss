@@ -37,6 +37,8 @@
 
 .guide-card__desc {
   padding: 10px;
+  text-wrap: wrap;
+  width: 100%;
 }
 
 
@@ -47,24 +49,30 @@
   height: 100%;
   
 
-  & > :nth-child(even):hover {
-    box-shadow: 10px 10px 20px rgba($semidark, 0.5);
-    border: none;
-  }
 
-  & > :nth-child(odd):hover {
-    box-shadow: -10px 10px 20px rgba($semidark, 0.5);
-    border: none;
-  }
+  // & > :nth-child(even) {
+
+  // }
+
+  // & > :nth-child(odd) {
+  //   box-shadow: -10px 10px 20px rgba($semidark, 0.5);
+  //   border: none;
+  // }
+
+
 
   .guide-card {
     justify-content: space-between;
     gap: 20px;
     padding: 20px 10px;
-    width: 300px;
-    height: auto;
+    max-width: 300px;
+    flex-shrink: 1;
+    height: 100%;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+
+    box-shadow: 10px 10px 20px rgba($semidark, 0.5);
+    border: none;
    
   
     &:hover {

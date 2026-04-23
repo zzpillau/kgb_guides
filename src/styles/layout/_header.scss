@@ -1,5 +1,6 @@
 @use "../abstract/variables" as *;
 @use "../abstract/mixins" as *;
+@use "../abstract/funcs" as *;
 
 .header {
   position: fixed;
@@ -7,10 +8,7 @@
   width: 100%;
   background-color: rgb($white, 0);
   z-index: 1000;
-
-
-
-  
+ 
 
 
   &.scrolled {
@@ -24,6 +22,12 @@
     gap: 20px;
     @include media('medium', 'small') {
       display: none;
+    }
+
+    .nav__link {
+      @include media(840px, 769px) {
+      font-size: fluid(16, 14, 840, 769);
+    }
     }
   }
 }

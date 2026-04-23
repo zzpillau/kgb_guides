@@ -1,8 +1,11 @@
 @use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/funcs" as *;
 
 .footer {
   background-color: $dark;
   color: $white;
+  height: fit-content;
 
 
 
@@ -10,14 +13,24 @@
     padding: 20px 60px;
    justify-content: space-between;
    align-items: flex-start;
+   gap: 35px;
+   flex-wrap: wrap;
+
+       
+    // @include media('medium', 'small') {
+    //   flex-direction: column;
+      
+    // }
 
    .footer__contacts {
     gap: 10px;
-    width: 30%;
+    // width: 30%;
    }
 
    .footer__socials {
-    width: 350px;
+    min-width: 300px;
+    max-width: 350px;
+    width: 100%;
    }
 
    .footer__contacts,
@@ -32,6 +45,12 @@
    .footer__policy {
     gap: 5px;
     
+   }
+
+   .social__text > p{
+      // @include media(950px, 769px) {
+      //   font-size: fluid(16, 12, 950, 769);
+      // }
    }
 
 
@@ -55,13 +74,18 @@
 
     .contact-link {
       color: $white;
+
+      // @include media(950px, 769px) {
+      //   font-size: fluid(16, 12, 950, 769);
+      // }
+
     }
   }
 }
 
 
  .footer__policy {
-  width: 30%;
+  // width: 30%;
   align-items: flex-end;
 
  }
