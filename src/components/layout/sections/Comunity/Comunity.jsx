@@ -10,7 +10,7 @@ const comunity = () => {
         <div className="comunity__container container">
           <div className="comunity__content flex-column">
             <div className="comunity__header">
-              <h2 className="benefits__title">
+              <h2 className="comunity__title">
                 {t('comunity_section.comunity_title')}
               </h2>
             </div>

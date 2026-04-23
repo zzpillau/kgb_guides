@@ -6,6 +6,11 @@
 .about {
   height: fit-content;
 }
+
+.about__subtitle, .about__title {
+ text-align: center;
+}
+
 .about__content {
   height: 100%;
   justify-content: space-around;

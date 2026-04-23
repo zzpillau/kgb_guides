@@ -1,4 +1,5 @@
 @use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
 
 .header {
   position: fixed;
@@ -7,25 +8,47 @@
   background-color: rgb($white, 0);
   z-index: 1000;
 
+
+
+  
+
+
   &.scrolled {
-    background: $white; // становится белым
-    box-shadow: 0 3px 5px rgba($semidark, 0.5);
+    @include media('large', 'small') {
+      background: $white; // становится белым
+      box-shadow: 0 3px 5px rgba($semidark, 0.5);
+   }
+  }
+
+  .nav__list {
+    gap: 20px;
+    @include media('medium', 'small') {
+      display: none;
+    }
   }
 }
 
 .header__wrapper {
   padding: 0 20px;
   height: 100%;
+  justify-content: space-between;
+  width: 100%;
+  
+
 }
 
 .header__container {
   padding: 8px 0;
   height: 100%;
+    width: 100%;
+
 }
 
 .header__content {
   justify-content: space-between;
   height: 100%;
+    width: 100%;
+
 }
 
 // Logo
@@ -33,6 +56,9 @@
 .header__logo-container {
   height: 50px;
   width: 50px;
+    // @include media('medium', 'small') {
+    //   display: none;
+    // }
 }
 
 .logo {
@@ -67,15 +93,16 @@
   justify-self: flex-start;
 }
 
-.nav__list {
-  gap: 20px;
-}
+
 
 
 // Contacts
 
 .header__contacts {
   gap: 10px;
+    @include media('medium', 'small') {
+      display: none;
+    }
 }
 
 .header__contacts-icon {

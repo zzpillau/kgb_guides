@@ -5,6 +5,8 @@ import guides from './GuidesCards/guides.js'
 const About = () => {
   const { t } = useTranslation()
 
+  
+
   return (
     <section className="section about" id="about">
       <div className="wrapper">

@@ -1,23 +1,41 @@
 @use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/funcs" as *;
 
 .comunity {
+    height: fit-content;
+
+  .comunity__title {
+    text-wrap: wrap;
+    text-align: center;
+  }
+
 
   .comunity__content {
-    gap: 30px;
+    gap: 15px;
   }
   
   .comunity__body {
-    width: 723px;
+    width: 100%;
 
     .comunity__body-text {
+      // display: flex;
       width: 100%;
       text-align: justify;
+      text-wrap: wrap;
+      height: 100%;
     }
   }
 
   .comunity__actions {
     width: 723px;
     justify-content: space-between;
+    
+    @include media('medium', 'small') {
+      flex-direction: column;
+      gap: 15px;
+    }
+
   }
 
   .comunity__action {

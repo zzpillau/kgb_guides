@@ -1,5 +1,7 @@
 @use "../abstract/variables" as *;
 @use "../abstract/placeholders" as *;
+@use "../abstract/funcs" as *;
+@use "../abstract/mixins" as *;
 
 .button {
   border: 1px $semidark solid;
@@ -72,19 +74,38 @@
 
   &.tours__tab {
     border: 1px $lightdark solid;
-    border-bottom: none;
+    border-bottom: 1px $white solid;;
     background-color: $white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: $semidark;
+    width: fit-content;
+
+    @include media(883px, 'small') {
+      border: 1px $lightdark solid;
+      border-radius: 30px;
+
+      @include media(883px, 'small') {
+        height: fit-content;
+        padding: 5px 10px;
+      }
+
+    }
+
+    .button__text {
+        @include media(883px, 'small') {
+          font-size: fluid(16, 10, 883, 350);
+        }
   }
+}
 
   &.tours__tab--active {
     background-color: $goldenmist;
+    border: 1px $goldenmist solid;
+
     // color: $white;
     // transform: translateY(-5px);
-    height: 50px;
-    border: none;
+    // height: 35px;
 
      .button__text {
         @extend %transition;

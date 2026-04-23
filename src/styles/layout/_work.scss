@@ -1,4 +1,5 @@
 @use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
 
 
 
@@ -11,6 +12,11 @@
   .work__content {
     margin: 0 auto;
     height: 100%;
+
+    @include media('medium', 'small') {
+      flex-direction: column;
+    }
+  
   }
 
   .process__wrapper,
