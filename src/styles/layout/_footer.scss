@@ -15,6 +15,7 @@
    align-items: flex-start;
    gap: 35px;
    flex-wrap: wrap;
+   width: 100%;
 
        
     // @include media('medium', 'small') {
@@ -28,7 +29,7 @@
    }
 
    .footer__socials {
-    min-width: 300px;
+    // min-width: 300px;
     max-width: 350px;
     width: 100%;
    }
@@ -47,10 +48,13 @@
     
    }
 
-   .social__text > p{
-      // @include media(950px, 769px) {
-      //   font-size: fluid(16, 12, 950, 769);
-      // }
+
+
+   .social__text > p {
+    text-wrap: wrap;
+      @include media(950px) {
+        font-size: fluid(16, 12, 950, 350);
+      }
    }
 
 
@@ -86,6 +90,6 @@
 
  .footer__policy {
   // width: 30%;
-  align-items: flex-end;
+  // align-items: flex-end;
 
  }

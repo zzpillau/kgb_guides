@@ -7,42 +7,23 @@ const Work = () => {
   return (
     <section className="section work" id="work">
       <div className="wrapper">
-        <div className="work__container container">
-          <div className="work__content flex-row">
-            <div className="benefits__wrapper flex-column">
-              <div className="benefits__content flex-column">
-                <div className="benefits__header">
-                  <h2 className="benefits__title">
-                    {t('work_section.benefits_title')}
-                  </h2>
-                </div>
-                <div className="work__benefits">
-                  <ul className="benefits-list flex-column">
-                    {lists.benefits.map((key) => (
-                      <li key={key}>{t(key)}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+        <div className='work__container container'> 
+        <div className="process__wrapper flex-column">
+          <div className="process__content flex-column">
+            <div className="process__header">
+              <h2 className="process__title">
+                {t('work_section.process_title')}
+              </h2>
             </div>
-
-            <div className="process__wrapper flex-column">
-              <div className="process__content flex-column">
-                <div className="process__header">
-                  <h2 className="process__title">
-                    {t('work_section.process_title')}
-                  </h2>
-                </div>
-                <div className="work__process">
-                  <ul className="process-list flex-column">
-                    {lists.process.map((key) => (
-                      <li key={key}>{t(key)}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+            <div className="work__process">
+              <ul className="process-list flex-column">
+                {lists.process.map((key) => (
+                  <li key={key}>{t(key)}</li>
+                ))}
+              </ul>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

@@ -12,10 +12,10 @@
 
 
   &.scrolled {
-    @include media('large', 'small') {
+    // @include media('large', 'small') {
       background: $white; // становится белым
       box-shadow: 0 3px 5px rgba($semidark, 0.5);
-   }
+  //  }
   }
 
   .nav__list {

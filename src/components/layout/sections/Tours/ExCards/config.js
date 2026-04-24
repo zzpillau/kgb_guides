@@ -1,3 +1,8 @@
+import foto1 from '../../../../../assets/img/tours/1.jpg'
+import foto2 from '../../../../../assets/img/tours/2.jpg'
+import foto3 from '../../../../../assets/img/tours/3.jpg'
+import foto4 from '../../../../../assets/img/tours/4.jpg'
+import foto5 from '../../../../../assets/img/tours/5.jpg'
 import dayImage from '../../../../../assets/img/tours/day.png'
 import eveningImage from '../../../../../assets/img/tours/evening.png'
 import misteryImage from '../../../../../assets/img/tours/mistery.png'
@@ -8,7 +13,7 @@ export default [
     id: 1,
     locationId: 1,
     guideId: 1,
-    src: eveningImage,
+    src: foto1,
     title: 'Обзорная экскурсия ↵ по Калининграду',
     desc: 'Город как целостная история — от истоков до современности',
     time: '4 часа',
@@ -31,7 +36,7 @@ export default [
   {
     id: 2,
     locationId: 1,
-    src: dayImage,
+    src: foto2,
     guideId: 1,
     title: 'Снято в Калининграде: ↵ город в кино',
     desc: 'Пешая экскурсия по местам киносъёмок в Калининграде',
@@ -56,7 +61,7 @@ export default [
   {
     id: 3,
     locationId: 1,
-    src: misteryImage,
+    src: foto4,
     guideId: 1,
     title: 'Снято в Калининграде: ↵ большой маршрут',
     desc: 'Автомобильная экскурсия по ключевым локациям съёмок',
@@ -84,7 +89,7 @@ export default [
     id: 4,
     locationId: 1,
     guideId: 1,
-    src: dayImage,
+    src: foto3,
     title: 'Калининград для жизни: ↵ экскурсия по районам',
     desc: 'Практический разбор города для тех, кто думает о переезде',
     time: '3–4 часа',
@@ -110,7 +115,7 @@ export default [
     id: 5,
     locationId: 1,
     guideId: 1,
-    src: misteryImage,
+    src: foto5,
     title: 'Калининград — город Победы: ↵ мемориальный маршрут',
     desc: 'Экскурсия по ключевому мемориальному пространству',
     time: '2 часа',

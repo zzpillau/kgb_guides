@@ -5,7 +5,6 @@ import max from '../../assets/icons/max_dark.svg'
 import telegram from '../../assets/icons/telegram_dark.svg'
 import telephone from '../../assets/icons/telephone_dark.svg'
 
-
 const Burger = () => {
   const { t } = useTranslation()
 
@@ -49,7 +48,7 @@ const Burger = () => {
           </li>
 
           <li className="nav__item">
-            <a href="#work" className="nav__link" onClick={close}>
+            <a href="#benefits" className="nav__link" onClick={close}>
               {t('header.benefits')}
             </a>
           </li>
@@ -65,7 +64,7 @@ const Burger = () => {
           </li>
         </ul>
 
-<div className="header__contacts flex-row">
+        <div className="header__contacts flex-row">
           <a href="#hero">
             <img className="header__contacts-icon" src={telephone} alt="" />
           </a>
@@ -76,7 +75,6 @@ const Burger = () => {
             <img className="header__contacts-icon" src={telegram} alt="" />
           </a>
         </div>
-        
       </div>
     </>
   )

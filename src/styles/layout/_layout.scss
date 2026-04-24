@@ -31,26 +31,17 @@ footer {
     margin: 0 auto;
     width: 100%;
 
-    @include media('medium', 'small') {
-        padding: 20px 0 8px;
-      }
+    // @include media('medium', 'small') {
+    //     padding: 20px 0 8px;
+    //   }
 
     &.hero__container {
       // padding: 60px 0 0 60px;
     }
 
     &.work__container {
-      padding: 80px 0 0 60px;
+      padding: 80px 0
     }
 
   }
-
-  &.work {
-    // height: 60vh;
-  }
-
-  &.comunity {
-    // height: 40vh;
-  }
-
 }

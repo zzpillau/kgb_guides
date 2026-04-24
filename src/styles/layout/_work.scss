@@ -5,7 +5,7 @@
 
 .work {
   height: fit-content;
-  min-height: 60vh;
+  min-height: 100vh;
 
   // background-color: $dark;
   background-color: $semidark;
@@ -24,43 +24,30 @@
   
   }
 
-  .process__wrapper,
-  .benefits__wrapper {
+  .process__wrapper {
     // position: relative;
     height: 100%;
     // width: 50%;
   }
 
-  .benefits__wrapper {
-    padding-left: 40px;
-  }
+
 
    .process__wrapper {
-      padding-right: 40px;
+      padding: 40px;
    }
   
-  .benefits__content {
-    color: $white;
-    width: 100%;
-    height: 300px;  
-    gap: 30px;
-    // position: absolute;
-    // top: 40px;
-    // left: 82px;
-    justify-content: flex-start;
-    
-  }
+
 
 
   .process__content {
     // position: absolute;
     // right: 82px;
     // top: 10px;
-    width: 100%;
+    width: fit-content;
     // height: auto;
     background-color: $white;
     border-radius: 20px;
-    padding: 20px 35px;
+    padding: 40px;
     gap: 30px;
 
   //   box-shadow:
@@ -68,8 +55,7 @@
 
   }
 
-  .process-list, 
-  .benefits-list {
+  .process-list  {
     align-items: flex-start;
     gap: 20px 0;
   }
@@ -106,28 +92,6 @@
   }
 
 
-  .benefits-list {
-  list-style: none;
-  padding-left: 0;
-  width: 100%;
-
-
-  li {
-    position: relative;
-    padding-left: 2rem;
-    font-size: 18px; 
-
-    &::before {
-      content: "•";  
-      position: absolute;
-      left: 0;
-      top: 0.1em; 
-      font-size: 1.5em;
-      line-height: 1;
-      color: $goldenmist;  
-    }
-  }
-}
-
+ 
 
 }

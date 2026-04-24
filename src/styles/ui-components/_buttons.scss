@@ -48,10 +48,19 @@
 
 
   &.comunity__action {
+
+    
     background-color: $accent;
     border: 1px $accent solid;
     color: $white;
     border-radius: 20px;
+
+      .button__text {
+      @include media(450px, 'small') {
+        font-size: fluid(16, 12, 450, 350);
+      }
+      }
+
 
 
 
