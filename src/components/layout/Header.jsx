@@ -3,13 +3,14 @@ import logo from '../../assets/icons/logo_dark.png'
 import max from '../../assets/icons/max_dark.svg'
 import telegram from '../../assets/icons/telegram_dark.svg'
 import telephone from '../../assets/icons/telephone_dark.svg'
+import Burger from '../ui/Burger.jsx'
 
 const Header = () => {
   const { t } = useTranslation()
 
   return (
     <header className="header">
-      <div className="header__wrapper">
+      <div className="header__wrapper flex-row">
         <div className="header__container">
           <div className="header__content flex-row">
             <div className="header__logo-container">
@@ -29,14 +30,13 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#tours" className="nav__link">
-                    {t('header.tours')}
+                  <a href="#benefits" className="nav__link">
+                    {t('header.benefits')}
                   </a>
                 </li>
-
                 <li className="nav__item">
-                  <a href="#work" className="nav__link">
-                    {t('header.benefits')}
+                  <a href="#tours" className="nav__link">
+                    {t('header.tours')}
                   </a>
                 </li>
                 <li className="nav__item">
@@ -65,6 +65,8 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        <Burger />
       </div>
     </header>
   )

@@ -14,13 +14,13 @@ const GuideCard = ({ id, src, name, specs, desc }) => {
         <img src={imageSrc} alt={name} loading="lazy" decoding="async" />
       </div>
 
-      <h3 className="guide-card__name flex-column">
+      <h3 className="guide-card__name flex-row">
         <DropCapWord word={name[0]} />
         <DropCapWord word={name[1]} />
       </h3>
 
-      <div className="guide-card__specs ta-right">
-        <p className="guide-card__specs-label">{t('guide.specs')}</p>
+      <div className="guide-card__specs ta-center">
+        {/* <p className="guide-card__specs-label">{t('guide.specs')}</p> */}
         <p className="guide-card__specs-value">{specs}</p>
       </div>
 

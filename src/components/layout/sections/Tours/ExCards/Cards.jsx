@@ -2,8 +2,7 @@ import Card from './Card.jsx'
 import config from './config.js'
 
 const Cards = ({ activeTab }) => {
-  const { excursions } = config.find(({ id }) => id === activeTab)
-  console.log(excursions)
+  const excursions = config.filter((ex) => ex.locationId === activeTab)
 
   excursions.forEach((e) => {
     console.log(e.title)

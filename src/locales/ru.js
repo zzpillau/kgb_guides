@@ -11,6 +11,7 @@ const ru = {
     team: 'Команда',
     benefits: 'Почему мы',
     process: 'Как заказать',
+    profit: 'Что вы получите',
   },
   texts: {
     about_text: 'С опорой на экспертизу профессионального сообщества региона',
@@ -27,6 +28,7 @@ const ru = {
     pick_tour: 'Выбрать маршрут',
     pick_guide: 'Выбрать гида',
     request: 'Запрос',
+    add_to_list: 'В корзину',
   },
   tabs: {
     kaliningrad: 'Калининград',

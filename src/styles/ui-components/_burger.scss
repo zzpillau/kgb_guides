@@ -1,0 +1,108 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/placeholders" as *;
+
+.burger-menu {
+  display: none;
+
+  @include media('medium') {
+    display: flex;
+    height: 60px;
+    width: 60px;
+
+    .bars {
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      // padding-: 0 20px;
+      align-items: flex-end;
+      gap: 6px;
+    }
+  }
+  
+}
+
+.popup {
+  display: none;
+
+  @include media('medium', 'small') {
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding-bottom: 64px;
+    left: 200vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: all .5s ease-in-out;
+
+    &.open {
+      left: 0;
+    }
+
+    .nav__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      align-self: center;
+      padding: 50px 0;
+      overflow: auto;
+      gap: 30px;
+
+      & > li {
+        
+
+        a {
+        width: 100%;
+        color: $dark;
+        font-family: 'MontserratVariable', 'Times New Roman', serif;
+        @include font($font-size-small, 16px, 400, normal);
+        }
+      }
+      
+      
+    }
+
+    & > .header__contacts {
+      @include media('medium', 'small') {
+        display: flex;
+      }
+}
+  }
+}
+
+.bars {
+  gap: 5px;
+}
+
+.bar {
+  height: 2px;
+  background-color: $dark;
+  transition: all .5s ease-out;
+
+  &.bottom-line {
+    width: 20px;
+  }
+
+  &.top-line {
+    width: 20px;
+  }
+}
+
+.burger-menu.active {
+  .top-line {
+    width: 20px;
+    transform: translateY(4px) rotate(45deg);
+  }
+}
+
+.burger-menu.active {
+  .bottom-line {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+}

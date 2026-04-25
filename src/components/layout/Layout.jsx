@@ -1,11 +1,10 @@
-import { Outlet } from 'react-router-dom'
 import { useEffect } from 'react'
+import { Outlet } from 'react-router-dom'
 
 import Footer from './Footer.jsx'
 import Header from './Header.jsx'
 
 const Layout = () => {
-
   useEffect(() => {
     const header = document.querySelector('header')
 
@@ -16,7 +15,6 @@ const Layout = () => {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
 
   return (
     <>

@@ -1,26 +1,60 @@
 @use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/funcs" as *;
 
-.comunity {
+.comunity__container {
+    background-color: rgb($white, 0.9);
+    border-radius: 5px;
+    color: $dark;
+    max-width: 750px;
+    padding: 20px !important;
+
+}
+
+
+  .comunity__title {
+    text-wrap: wrap;
+    text-align: center;
+    width: 100%;
+  }
+
 
   .comunity__content {
-    gap: 30px;
+    gap: 15px;
+    height: 100%;
   }
   
   .comunity__body {
-    width: 723px;
+    width: 100%;
+
 
     .comunity__body-text {
+      // display: flex;
       width: 100%;
+      max-width: 600px;
       text-align: justify;
+      text-wrap: wrap;
+      height: 100%;
+
+      @include media(450px, 'small') {
+        font-size: fluid(18, 14, 450, 350);
+      }
     }
   }
 
   .comunity__actions {
-    width: 723px;
-    justify-content: space-between;
+    
+
+    // justify-content: space-between;
+    gap: 15px;
+    
+    @include media('medium', 'small') {
+      flex-direction: column;
+    }
+
   }
 
   .comunity__action {
     width: 300px;
+    min-width: fit-content;
   }
-}

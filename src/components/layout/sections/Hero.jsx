@@ -1,15 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Button from '../../ui/Button.jsx'
 
-const Accented = ({ first, last }) => {
-  return (
-    <div className="accented-str flex-row">
-      <span className="lower">{first}</span>
-      <span className="accented">{last}</span>
-    </div>
-  )
-}
-
 const Hero = () => {
   const { t } = useTranslation()
 
@@ -18,8 +9,10 @@ const Hero = () => {
   const chunkTitle = mainTitle.split(' ')
   console.log(chunkTitle)
 
-  const firstString = [chunkTitle[0], chunkTitle[1]].join(' ')
+  const firstString = [chunkTitle[0], chunkTitle[1], chunkTitle[2]].join(' ')
   console.log(firstString)
+
+  const secondString = chunkTitle[3]
 
   const thirdString = [chunkTitle[4], chunkTitle[5]].join(' ')
   console.log(thirdString)
@@ -33,10 +26,8 @@ const Hero = () => {
             <div className="hero__header flex-column">
               <h1 className="hero__title ta-center  flex-column">
                 <span>{firstString}</span>
-                <div className="flex-row">
-                  <Accented first={chunkTitle[2]} last={chunkTitle[3]} />
-                  <span className="thirdString">{thirdString}</span>
-                </div>
+                <span className="accented secondString">{secondString}</span>
+                <span className="thirdString">{thirdString}</span>
               </h1>
 
               {/* Actions */}
@@ -60,7 +51,7 @@ const Hero = () => {
               <h2 className="hero__subtitle ta-center">
                 {t('titles.hero_subtitle')}
               </h2>
-              <div className="about__text">{t('texts.about_text')}</div>
+              <div className="hero__text">{t('texts.about_text')}</div>
               {/* Labels */}
               <div className="hero__labels flex-row">
                 <span className="hero__label">

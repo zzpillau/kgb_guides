@@ -1,22 +1,30 @@
 @use "../abstract/placeholders" as *;
 @use "../abstract/mixins" as *;
+@use "../abstract/funcs" as *;
 @use "../abstract/variables" as *;
 
 h1 {
   @extend %font-header;
   @include font($font-size-large, 36px, 300);
+
+  @include media(640px, 350px) {
+    font-size: fluid(32, 16, 640, 350)
+  }
 }
 
 h2 {
   @extend %font-header;
   @include font($font-size-large, 36px);
+
+  @include media ('medium', 'small') {
+    font-size: fluid(32, 20, 768, 350)
+  }
+
 }
 
 h3 {
   @extend %font-header;
   @include font($font-size-medium, 27.7px, 200, normal, none);
-
-
 }
 
   .ex-card__title > h3 {
@@ -29,7 +37,7 @@ p {
   @include font($font-size-small, 24px, 200, normal, none);
 
     &.guide-card__specs-value {
-       @include font($font-size-small, 24px, 400, normal);
+       @include font($font-size-xsmall, 24px, 400, normal);
     }
 
     &.guide-card__specs-label {
@@ -45,15 +53,41 @@ p {
 
 }
 
-.about__text {
+.extended__text > * {
+  text-indent: 2em;
+  text-align: justify
+}
+
+.ext-profit > * {
+  @extend %font-main;
+  @include font($font-size-small, 24px, 200, normal, none);
+}
+
+.hero__text {
   @extend %font-main;
   @include font(18px, 24px, 400, normal, none);
+  flex-wrap: wrap;
+  text-align: center;
+
+  @include media(825px, 767px) {
+    font-size: fluid(18, 14, 825, 350)
+  }
+
+   @include media(768px) {
+    // display: none;
+  }
 }
 
 
 .hero__labels {
   @extend %font-main;
   @include font($font-size-medium, 16px, 400, normal);
+
+    @include media(825px, 350px) {
+    font-size: fluid(20, 14, 900, 350)
+    }
+
+
 }
 
 .button__text {

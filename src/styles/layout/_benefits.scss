@@ -1,0 +1,111 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/placeholders" as *;
+@use "../abstract/funcs" as *;
+
+
+
+.benefits {
+  height: fit-content;
+  // min-height: 100vh;
+
+
+  background-image: url("../../assets/img/vlg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  .benefits__container {
+    // margin: 0 auto;
+    height: 100%;
+  }
+
+
+  .benefits__title {
+    color: $white;
+  }
+
+  .benefits__wrapper {
+    height: 100%;
+    padding: 0 20px;
+  }
+
+
+
+
+  
+  .benefits__content {
+    width: 100%;
+    height: 100%;  
+    gap: 5vh;
+    padding-bottom: 5vh;
+
+    
+  }
+
+
+
+
+  .benefits-list {
+    align-items: flex-start;
+    gap: 20px 0;
+  }
+
+
+
+  .benefits__list-container {
+    background-color: rgb($white, 0.9);
+    border-radius: 5px;
+    width: fit-content;
+  }
+
+  .benefits-list {
+  list-style: none;
+  gap: 30px;
+  color: $dark;
+  padding: 30px;
+  width: fit-content;
+
+
+
+  @extend %font-main;
+  @include font($font-size-medium, 24px, 400, normal);
+
+      @include media(990px, 'small') {
+        flex-direction: column;
+        // width: 50vw;
+      }
+
+  
+
+
+
+  li {
+    position: relative;
+    text-wrap: nowrap;
+    text-wrap: wrap;
+    padding-left: 2rem;
+    font-size: 18px;
+    font-family: 'MontserratVariable', 'Times New Roman', serif;
+    width: fit-content;
+
+      @include media(450px, 'small') {
+        font-size: fluid(18, 16, 450, 350);
+      }
+    
+    &::before {
+      content: "•";  
+      position: absolute;
+      left: 0;
+      top: -20px; 
+      font-size: 3em;
+      line-height: 1;
+      color: $goldenmist;  
+    }
+  }
+}
+
+
+}
