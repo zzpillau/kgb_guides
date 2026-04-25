@@ -24,33 +24,29 @@ const Benefits = () => {
                 </ul>
               </div>
 
-            <div className="comunity__container">
-              <div className="comunity__content flex-column">
-                <div className="comunity__header">
-                  <h2 className="comunity__title">
-                    {t('comunity_section.comunity_title')}
-                  </h2>
-                </div>
-                <div className="comunity__body flex-row">
-                  <p className="comunity__body-text">
-                    {t('comunity_section.comunity_text')}
-                  </p>
-                </div>
-                <div className="comunity__actions flex-row">
-                  <Button className="comunity__action">
-                    {t('comunity_section.public_VK')}
-                  </Button>
-                  <Button className="comunity__action">
-                    {t('comunity_section.public_expert')}
-                  </Button>
+              <div className="comunity__container">
+                <div className="comunity__content flex-column">
+                  <div className="comunity__header">
+                    <h2 className="comunity__title">
+                      {t('comunity_section.comunity_title')}
+                    </h2>
+                  </div>
+                  <div className="comunity__body flex-row">
+                    <p className="comunity__body-text">
+                      {t('comunity_section.comunity_text')}
+                    </p>
+                  </div>
+                  <div className="comunity__actions flex-row">
+                    <Button className="comunity__action">
+                      {t('comunity_section.public_VK')}
+                    </Button>
+                    <Button className="comunity__action">
+                      {t('comunity_section.public_expert')}
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
-
-
-
-            </div>
-
           </div>
         </div>
       </div>

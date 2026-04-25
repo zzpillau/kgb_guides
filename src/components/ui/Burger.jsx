@@ -41,15 +41,16 @@ const Burger = () => {
               {t('header.team')}
             </a>
           </li>
-          <li className="nav__item">
-            <a href="#tours" className="nav__link" onClick={close}>
-              {t('header.tours')}
-            </a>
-          </li>
 
           <li className="nav__item">
             <a href="#benefits" className="nav__link" onClick={close}>
               {t('header.benefits')}
+            </a>
+          </li>
+
+          <li className="nav__item">
+            <a href="#tours" className="nav__link" onClick={close}>
+              {t('header.tours')}
             </a>
           </li>
           <li className="nav__item">

@@ -30,14 +30,13 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#tours" className="nav__link">
-                    {t('header.tours')}
-                  </a>
-                </li>
-
-                <li className="nav__item">
                   <a href="#benefits" className="nav__link">
                     {t('header.benefits')}
+                  </a>
+                </li>
+                <li className="nav__item">
+                  <a href="#tours" className="nav__link">
+                    {t('header.tours')}
                   </a>
                 </li>
                 <li className="nav__item">
